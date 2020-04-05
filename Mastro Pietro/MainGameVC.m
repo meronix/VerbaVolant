@@ -64,6 +64,8 @@
 
 
 -(IBAction)startToPlay:(id)sender {
+    self.continuaButton.hidden = NO;
+
     self.boxQuestionButtons.hidden = YES;
 //    self.continuaButton.hidden = YES;
     self.boxContinueButtons.hidden = YES;
@@ -86,11 +88,32 @@
     self.quizView.alpha = 0;
     self.quizView.hidden = YES;
     _playerController.modalPresentationStyle = UIModalPresentationFullScreen;
-    
+    _playerController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     UINavigationController* myNav = self.navigationController;
     
+    [myNav pushViewController:_playerController animated:YES];
+    myNav.delegate = self;
+  //  [self presentViewController:_playerController animated:YES completion:^() {
+//        AVPlayer* player = self.playerController.player;
+//        player.automaticallyWaitsToMinimizeStalling = NO;
+//        [player playImmediatelyAtRate:1];
+//        [player play];
+//        //   [player performSelector:@selector(play) withObject:nil afterDelay:8];
+//        [player performSelector:@selector(play) withObject:nil afterDelay:2.5];
+//        [player performSelector:@selector(play) withObject:nil afterDelay:1.5];
+//        [player performSelector:@selector(play) withObject:nil afterDelay:1];
+//        [self.playerController.view addSubview:self.quizView];
+//        self.quizView.alpha = 0;
+//        self.quizView.hidden = YES;
+//        AppDelegate* appD = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+//        appD.restrictRotation = UIInterfaceOrientationMaskLandscape;
+
+ //   } ];
     
-    [self presentViewController:_playerController animated:YES completion:^() {
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (viewController == self.playerController) {
         AVPlayer* player = self.playerController.player;
         player.automaticallyWaitsToMinimizeStalling = NO;
         [player playImmediatelyAtRate:1];
@@ -104,9 +127,7 @@
         self.quizView.hidden = YES;
         AppDelegate* appD = (AppDelegate*) [[UIApplication sharedApplication] delegate];
         appD.restrictRotation = UIInterfaceOrientationMaskLandscape;
-
-    } ];
-    
+    }
 }
 
 -(void)addPlayer:(AVPlayerViewController*)aPlayerVC withFile:(NSString*)aMovieFile{
@@ -129,13 +150,16 @@
     NSLog(@"Text: %@", notification.class);
     
     if (_currentWord) {
-        
         // step 0, do someting
-        [UIView animateWithDuration:0.4f delay:0.f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateWithDuration:0.3f delay:0.f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             // step 1, do someting
         }completion:^(BOOL finished) {
             // step 2, do someting
             self.boxQuestionButtons.hidden = NO;
+            if (self.toBePlayedMovies.count == 0) {
+                self.continuaButton.hidden = YES;
+            }
+
         }];
     }
     
@@ -191,7 +215,7 @@
 
 -(void)hideDelayedForAnswer:(UIButton*)sender {
     // step 0, do someting
-    [UIView animateWithDuration:1.2f delay:.2f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+    [UIView animateWithDuration:.6f delay:.0f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
         // step 1, do someting
         if (sender.tag == 1) {
             sender.backgroundColor = [UIColor greenColor];
@@ -201,7 +225,7 @@
     }completion:^(BOOL finished) {
         // step 2, do someting
         // step 0, do someting
-        [UIView animateWithDuration:1.0f delay:1.8f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        [UIView animateWithDuration:.6f delay:2.2f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             // step 1, do someting
             self.boxQuestionButtons.alpha = 0;
             self.boxContinueButtons.alpha = 0;
@@ -222,7 +246,8 @@
     [self.view addSubview:self.quizView];
     self.quizView.alpha = 0;
     self.quizView.hidden = YES;
-    [self.playerController dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
+//    [self.playerController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)replayButton:(UIButton *)sender {
@@ -242,10 +267,6 @@
     if (!_toBePlayedMovies) {
         self.toBePlayedMovies = [self.myMoviesAndWords.listaMovie mutableCopy];
     }
-    if (_toBePlayedMovies.count == 0) {
-        [self exitButton:nil];
-        return;
-    }
     
     NSString* nextWord = nil;
     if (showAnswer) {
@@ -257,6 +278,10 @@
         self.message.text = [NSString stringWithFormat:@"%@", nextWord];
         self.currentWord = nil;
     } else {
+        if (_toBePlayedMovies.count == 0) {
+            [self exitButton:nil];
+            return;
+        }
         nextWord = [self getNextMovieNameInList:_toBePlayedMovies andRemove:YES];
         self.quizView.alpha = 0;
         self.quizView.hidden = YES;

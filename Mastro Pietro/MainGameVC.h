@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainGameVC : UIViewController
+@interface MainGameVC : UIViewController <UINavigationControllerDelegate>
 
 
 @end

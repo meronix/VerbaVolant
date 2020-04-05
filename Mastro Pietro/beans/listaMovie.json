@@ -100,7 +100,15 @@
          "abiatico",
          "tauromachia"
       ],
- "listaMovie": [
+  "listaMovie": [
+  "zucchina",
+  "asinello",
+  "giallo  ",
+  "pizza",
+  "pancia"
+  ],
+
+ "NO_listaMovie": [
     "zucchina",
     "asinello",
     "giallo  ",
