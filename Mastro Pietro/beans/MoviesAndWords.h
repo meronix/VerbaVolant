@@ -11,8 +11,10 @@
 
 @interface MoviesAndWords : NSObject <NSCoding, NSCopying>
 
-@property (nonatomic, strong) NSArray *listaMovie;
+@property (nonatomic, strong) NSArray *listaRisposteKO;
 @property (nonatomic, strong) NSArray *wrongWords;
+@property (nonatomic, strong) NSArray *listaRisposteOK;
+@property (nonatomic, strong) NSArray *listaMovie;
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict;
 - (instancetype)initWithDictionary:(NSDictionary *)dict;

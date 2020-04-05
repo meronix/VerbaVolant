@@ -17,20 +17,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
-
-    
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    [_window makeKeyAndVisible];
-//    [_window setBackgroundColor:[UIColor orangeColor]];
-
-//    self.window.rootViewController = self.mainTabBarController;
-//    [self.window addSubview:self.mainTabBarController.view];
-
+    self.restrictRotation = UIInterfaceOrientationMaskLandscape;
     
     return YES;
 }
+
+-(UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return self.restrictRotation;
+}
+
+
 
 
 

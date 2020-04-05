@@ -10,6 +10,7 @@
 
 #import <AVKit/AVKit.h>
 #import "MoviesAndWords.h"
+#import "AppDelegate.h"
 
 @interface MainGameVC ()
 
@@ -21,7 +22,13 @@
 @property (strong, nonatomic) IBOutlet UIButton *b_answer_3;
 @property (strong, nonatomic) IBOutlet UIButton *b_answer_4;
 
+
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
+
+@property (strong, nonatomic) IBOutlet UIView *boxQuestionButtons;
+@property (strong, nonatomic) IBOutlet UILabel *message;
+@property (strong, nonatomic) IBOutlet UIView *boxContinueButtons;
+@property (strong, nonatomic) IBOutlet UIButton *continuaButton;
 
 @property (nonatomic, strong) MoviesAndWords * myMoviesAndWords;
 @property (nonatomic, strong) NSMutableArray * toBePlayedMovies;
@@ -29,10 +36,16 @@
 @property (nonatomic) int answers_correct;
 @property (nonatomic) int answers_total;
 
+@property (nonatomic, strong) NSString * currentWord;
+
+
 @end
 
 @implementation MainGameVC
 
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -44,10 +57,18 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     self.quizView.hidden = true;
+    AppDelegate* appD = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+    appD.restrictRotation = UIInterfaceOrientationMaskLandscape;
+
 }
 
 
--(IBAction)play:(id)sender {
+-(IBAction)startToPlay:(id)sender {
+    self.boxQuestionButtons.hidden = YES;
+//    self.continuaButton.hidden = YES;
+    self.boxContinueButtons.hidden = YES;
+    self.continuaButton.tag = 2;
+
     self.answers_correct = 0;
     self.answers_total = 0;
     [self updateScoreLabel];
@@ -60,10 +81,15 @@
     NSString* nextWord = [self getNextMovieNameInList:self.myMoviesAndWords.listaMovie andRemove:NO];
     
     [self addPlayer:_playerController withFile:nextWord];
-    [self nextLevel];
+    [self nextLevel_playAnswer:NO withCorrectAnswer:NO];
     self.playerController.modalPresentationStyle = UIModalPresentationPopover;
     self.quizView.alpha = 0;
     self.quizView.hidden = YES;
+    _playerController.modalPresentationStyle = UIModalPresentationFullScreen;
+    
+    UINavigationController* myNav = self.navigationController;
+    
+    
     [self presentViewController:_playerController animated:YES completion:^() {
         AVPlayer* player = self.playerController.player;
         player.automaticallyWaitsToMinimizeStalling = NO;
@@ -76,6 +102,9 @@
         [self.playerController.view addSubview:self.quizView];
         self.quizView.alpha = 0;
         self.quizView.hidden = YES;
+        AppDelegate* appD = (AppDelegate*) [[UIApplication sharedApplication] delegate];
+        appD.restrictRotation = UIInterfaceOrientationMaskLandscape;
+
     } ];
     
 }
@@ -98,6 +127,18 @@
     //Dismiss AVPlayerViewController
     NSLog(@"Text: %@", notification);
     NSLog(@"Text: %@", notification.class);
+    
+    if (_currentWord) {
+        
+        // step 0, do someting
+        [UIView animateWithDuration:0.4f delay:0.f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+            // step 1, do someting
+        }completion:^(BOOL finished) {
+            // step 2, do someting
+            self.boxQuestionButtons.hidden = NO;
+        }];
+    }
+    
     _quizView.hidden = false;
     self.quizView.alpha = 1;
 }
@@ -118,20 +159,62 @@
 //
 //}
 -(void)updateScoreLabel{
+    self.message.text = @"Che cosa ho detto?";
     self.scoreLabel.text = [NSString stringWithFormat:@"risposte esatte: %i / %i", _answers_correct, _answers_total];
 }
 
 - (IBAction)answerButton:(UIButton *)sender {
     NSLog(@"sender: %@", sender);
-    self.answers_total ++;
+    BOOL playAnswer = YES;
+    BOOL correctAnswer = YES;
     if (sender.tag == 1) {
+        //        sender.backgroundColor = [UIColor greenColor];
+        self.answers_total ++;
         self.answers_correct ++;
-        sender.backgroundColor = [UIColor greenColor];
-    } else {
-        sender.backgroundColor = [UIColor redColor];
+//        [self performSelector:@selector(hideDelayedForAnswer:) withObject:sender afterDelay:.3];
+        [self hideDelayedForAnswer:sender];
+    } else if (sender.tag == 0){
+        //        sender.backgroundColor = [UIColor redColor];
+        correctAnswer = NO;
+        self.answers_total ++;
+    //    [self performSelector:@selector(hideDelayedForAnswer:) withObject:sender afterDelay:.3];
+        [self hideDelayedForAnswer:sender];
+    } else if (sender.tag == 2){
+        playAnswer = NO;
+        self.boxQuestionButtons.hidden = NO;
+        self.boxContinueButtons.hidden = YES;
     }
     [self updateScoreLabel];
-    [self performSelector:@selector(nextLevel) withObject:nil afterDelay:1];
+    [self nextLevel_playAnswer:playAnswer withCorrectAnswer:correctAnswer];
+    //    [self performSelector:@selector(nextLevel) withObject:nil afterDelay:1];
+}
+
+-(void)hideDelayedForAnswer:(UIButton*)sender {
+    // step 0, do someting
+    [UIView animateWithDuration:1.2f delay:.2f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+        // step 1, do someting
+        if (sender.tag == 1) {
+            sender.backgroundColor = [UIColor greenColor];
+        } else if (sender.tag == 0){
+            sender.backgroundColor = [UIColor redColor];
+        }
+    }completion:^(BOOL finished) {
+        // step 2, do someting
+        // step 0, do someting
+        [UIView animateWithDuration:1.0f delay:1.8f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
+            // step 1, do someting
+            self.boxQuestionButtons.alpha = 0;
+            self.boxContinueButtons.alpha = 0;
+
+        }completion:^(BOOL finished) {
+            // step 2, do someting
+            self.boxQuestionButtons.hidden = YES;
+            self.boxContinueButtons.hidden = NO;
+            self.boxQuestionButtons.alpha = 1;
+            self.boxContinueButtons.alpha = 1;
+        }];
+
+    }];
 }
 
 - (IBAction)exitButton:(UIButton *)sender {
@@ -155,7 +238,7 @@
     [player play];
 }
 
--(void)nextLevel{
+-(void)nextLevel_playAnswer:(BOOL)showAnswer withCorrectAnswer:(BOOL)correctAnswer{
     if (!_toBePlayedMovies) {
         self.toBePlayedMovies = [self.myMoviesAndWords.listaMovie mutableCopy];
     }
@@ -163,7 +246,24 @@
         [self exitButton:nil];
         return;
     }
-    NSString* nextWord = [self getNextMovieNameInList:_toBePlayedMovies andRemove:YES];
+    
+    NSString* nextWord = nil;
+    if (showAnswer) {
+        if (correctAnswer) {
+            nextWord = [self getNextMovieNameInList:self.myMoviesAndWords.listaRisposteOK andRemove:NO];
+        } else {
+            nextWord = [self getNextMovieNameInList:self.myMoviesAndWords.listaRisposteKO andRemove:NO];
+        }
+        self.message.text = [NSString stringWithFormat:@"%@", nextWord];
+        self.currentWord = nil;
+    } else {
+        nextWord = [self getNextMovieNameInList:_toBePlayedMovies andRemove:YES];
+        self.quizView.alpha = 0;
+        self.quizView.hidden = YES;
+        self.currentWord = nextWord;
+        [self loadQuestionButtons];
+    }
+    
     [self addPlayer:_playerController withFile:nextWord];
     self.playerController.showsPlaybackControls = false;
     AVPlayer* player = self.playerController.player;
@@ -171,9 +271,10 @@
     [player playImmediatelyAtRate:1];
     [player play];
     
-    self.quizView.alpha = 0;
-    self.quizView.hidden = YES;
-    
+}
+
+-(void)loadQuestionButtons {
+    //  if (_currentWord) {
     NSArray* tempArray = @[_b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4];
     for (UIButton* aButt in tempArray) {
         aButt.tag = 0;
@@ -182,8 +283,8 @@
     int indexOk = arc4random() % tempArray.count;
     UIButton * tempButon = tempArray[indexOk];
     tempButon.tag = 1;
-    [tempButon setTitle:nextWord forState:UIControlStateNormal];
-
+    [tempButon setTitle:_currentWord forState:UIControlStateNormal];
+    
     NSMutableArray * tempArrayWords = [self.myMoviesAndWords.wrongWords mutableCopy];
     for (UIButton* aButt in tempArray) {
         if ( aButt.tag == 0) {
@@ -191,6 +292,9 @@
         }
     }
     
+    
+    
+    //   }
 }
 
 -(NSString*) getNextMovieNameInList:(NSArray*)inStringArray andRemove:(BOOL)andRemove{

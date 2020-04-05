@@ -8,8 +8,10 @@
 #import "MoviesAndWords.h"
 
 
-NSString *const kMoviesAndWordsListaMovie = @"listaMovie";
+NSString *const kMoviesAndWordsListaRisposteKO = @"listaRisposteKO";
 NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
+NSString *const kMoviesAndWordsListaRisposteOK = @"listaRisposteOK";
+NSString *const kMoviesAndWordsListaMovie = @"listaMovie";
 
 
 @interface MoviesAndWords ()
@@ -20,8 +22,10 @@ NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
 
 @implementation MoviesAndWords
 
-@synthesize listaMovie = _listaMovie;
+@synthesize listaRisposteKO = _listaRisposteKO;
 @synthesize wrongWords = _wrongWords;
+@synthesize listaRisposteOK = _listaRisposteOK;
+@synthesize listaMovie = _listaMovie;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -35,9 +39,11 @@ NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
     
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
-    if (self && [dict isKindOfClass:[NSDictionary class]]) {
-            self.listaMovie = [self objectOrNilForKey:kMoviesAndWordsListaMovie fromDictionary:dict];
+    if(self && [dict isKindOfClass:[NSDictionary class]]) {
+            self.listaRisposteKO = [self objectOrNilForKey:kMoviesAndWordsListaRisposteKO fromDictionary:dict];
             self.wrongWords = [self objectOrNilForKey:kMoviesAndWordsWrongWords fromDictionary:dict];
+            self.listaRisposteOK = [self objectOrNilForKey:kMoviesAndWordsListaRisposteOK fromDictionary:dict];
+            self.listaMovie = [self objectOrNilForKey:kMoviesAndWordsListaMovie fromDictionary:dict];
 
     }
     
@@ -48,17 +54,17 @@ NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    NSMutableArray *tempArrayForListaMovie = [NSMutableArray array];
-    for (NSObject *subArrayObject in self.listaMovie) {
+    NSMutableArray *tempArrayForListaRisposteKO = [NSMutableArray array];
+    for (NSObject *subArrayObject in self.listaRisposteKO) {
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
             // This class is a model object
-            [tempArrayForListaMovie addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
+            [tempArrayForListaRisposteKO addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
         } else {
             // Generic object
-            [tempArrayForListaMovie addObject:subArrayObject];
+            [tempArrayForListaRisposteKO addObject:subArrayObject];
         }
     }
-    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForListaMovie] forKey:kMoviesAndWordsListaMovie];
+    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForListaRisposteKO] forKey:kMoviesAndWordsListaRisposteKO];
     NSMutableArray *tempArrayForWrongWords = [NSMutableArray array];
     for (NSObject *subArrayObject in self.wrongWords) {
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
@@ -70,6 +76,28 @@ NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
         }
     }
     [mutableDict setValue:[NSArray arrayWithArray:tempArrayForWrongWords] forKey:kMoviesAndWordsWrongWords];
+    NSMutableArray *tempArrayForListaRisposteOK = [NSMutableArray array];
+    for (NSObject *subArrayObject in self.listaRisposteOK) {
+        if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
+            // This class is a model object
+            [tempArrayForListaRisposteOK addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
+        } else {
+            // Generic object
+            [tempArrayForListaRisposteOK addObject:subArrayObject];
+        }
+    }
+    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForListaRisposteOK] forKey:kMoviesAndWordsListaRisposteOK];
+    NSMutableArray *tempArrayForListaMovie = [NSMutableArray array];
+    for (NSObject *subArrayObject in self.listaMovie) {
+        if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
+            // This class is a model object
+            [tempArrayForListaMovie addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
+        } else {
+            // Generic object
+            [tempArrayForListaMovie addObject:subArrayObject];
+        }
+    }
+    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForListaMovie] forKey:kMoviesAndWordsListaMovie];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -93,16 +121,20 @@ NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
 {
     self = [super init];
 
-    self.listaMovie = [aDecoder decodeObjectForKey:kMoviesAndWordsListaMovie];
+    self.listaRisposteKO = [aDecoder decodeObjectForKey:kMoviesAndWordsListaRisposteKO];
     self.wrongWords = [aDecoder decodeObjectForKey:kMoviesAndWordsWrongWords];
+    self.listaRisposteOK = [aDecoder decodeObjectForKey:kMoviesAndWordsListaRisposteOK];
+    self.listaMovie = [aDecoder decodeObjectForKey:kMoviesAndWordsListaMovie];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
-    [aCoder encodeObject:_listaMovie forKey:kMoviesAndWordsListaMovie];
+    [aCoder encodeObject:_listaRisposteKO forKey:kMoviesAndWordsListaRisposteKO];
     [aCoder encodeObject:_wrongWords forKey:kMoviesAndWordsWrongWords];
+    [aCoder encodeObject:_listaRisposteOK forKey:kMoviesAndWordsListaRisposteOK];
+    [aCoder encodeObject:_listaMovie forKey:kMoviesAndWordsListaMovie];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -111,8 +143,10 @@ NSString *const kMoviesAndWordsWrongWords = @"wrongWords";
     
     if (copy) {
 
-        copy.listaMovie = [self.listaMovie copyWithZone:zone];
+        copy.listaRisposteKO = [self.listaRisposteKO copyWithZone:zone];
         copy.wrongWords = [self.wrongWords copyWithZone:zone];
+        copy.listaRisposteOK = [self.listaRisposteOK copyWithZone:zone];
+        copy.listaMovie = [self.listaMovie copyWithZone:zone];
     }
     
     return copy;

@@ -13,11 +13,25 @@
          "zio claudio",
          "zia vale",
          "zio angelo",
+         "zio gabriele",
+         "zio renzo",
+         "zio piva",
+         "zia carla",
          "matteo",
          "gianluchino",
          "tommy",
          "andrea",
          "samuele",
+         "luca",
+         "adriana",
+         "rozalia",
+         "sofia",
+         "pizzoccheri",
+         "sciatt",
+         "bresaola",
+         "bitto",
+         "casera",
+         "sciare",
          "idiosincrasia",
          "pusillanime",
          "megera",
@@ -34,6 +48,8 @@
          "grappa",
          "bombardino",
          "amarone",
+         "valpolicella",
+         "valmalenco",
          "gewürztraminer",
          "settimo sigillo",
          "fotosintesi",
@@ -44,6 +60,8 @@
          "sta per piovere",
          "sagittabondo",
          "sgarzigliona",
+         "gongolare",
+         "zumba fitness",
          "gaglioffo",
          "obnubilarsi",
          "lapalissiano",
@@ -79,6 +97,7 @@
          "duttile",
          "cinisello balsamo",
          "favellare",
+         "abiatico",
          "tauromachia"
       ],
  "listaMovie": [
@@ -148,7 +167,16 @@
     "brutto",
     "scale ",
     "delfino"
-  ]
+   ],
+  "listaRisposteOK": [
+     "zucchina",
+     "pappa"
+     ],
+    "listaRisposteKO": [
+       "brutto",
+       "pistola",
+       "asinello"
+    ]
 }
 
 
