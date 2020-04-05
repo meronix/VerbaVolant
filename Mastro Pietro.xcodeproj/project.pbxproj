@@ -7,17 +7,154 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA6E4481243A1B050033C838 /* MoviesAndWords.m in Sources */ = {isa = PBXBuildFile; fileRef = CA6E447F243A1B050033C838 /* MoviesAndWords.m */; };
+		CA6E44C4243A1B380033C838 /* testa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4482243A1B2C0033C838 /* testa.mp4 */; };
+		CA6E44C5243A1B380033C838 /* pappa.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4483243A1B2C0033C838 /* pappa.mp4 */; };
+		CA6E44C6243A1B380033C838 /* prato.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4484243A1B2C0033C838 /* prato.mp4 */; };
+		CA6E44C7243A1B380033C838 /* zucchina.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4485243A1B2C0033C838 /* zucchina.mp4 */; };
+		CA6E44C8243A1B380033C838 /* paglia .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4486243A1B2C0033C838 /* paglia .mp4 */; };
+		CA6E44C9243A1B380033C838 /* carota .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4487243A1B2D0033C838 /* carota .mp4 */; };
+		CA6E44CA243A1B380033C838 /* maiale.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4488243A1B2D0033C838 /* maiale.mp4 */; };
+		CA6E44CB243A1B380033C838 /* arancio .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4489243A1B2D0033C838 /* arancio .mp4 */; };
+		CA6E44CC243A1B380033C838 /* mano.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E448A243A1B2D0033C838 /* mano.mp4 */; };
+		CA6E44CD243A1B380033C838 /* sbagliato .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E448B243A1B2D0033C838 /* sbagliato .mp4 */; };
+		CA6E44CE243A1B380033C838 /* basta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E448C243A1B2D0033C838 /* basta.mp4 */; };
+		CA6E44CF243A1B380033C838 /* gallo  .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E448D243A1B2D0033C838 /* gallo  .mp4 */; };
+		CA6E44D0243A1B380033C838 /* gallo    .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E448E243A1B2E0033C838 /* gallo    .mp4 */; };
+		CA6E44D1243A1B380033C838 /* sali.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E448F243A1B2E0033C838 /* sali.mp4 */; };
+		CA6E44D2243A1B380033C838 /* carota.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4490243A1B2E0033C838 /* carota.mp4 */; };
+		CA6E44D3243A1B380033C838 /* arancio.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4491243A1B2E0033C838 /* arancio.mp4 */; };
+		CA6E44D4243A1B380033C838 /* pizza .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4492243A1B2E0033C838 /* pizza .mp4 */; };
+		CA6E44D5243A1B380033C838 /* hi-oh.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4493243A1B2E0033C838 /* hi-oh.mp4 */; };
+		CA6E44D6243A1B380033C838 /* salvietta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4494243A1B2E0033C838 /* salvietta.mp4 */; };
+		CA6E44D7243A1B380033C838 /* scale.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4495243A1B2F0033C838 /* scale.mp4 */; };
+		CA6E44D8243A1B380033C838 /* gallo .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4496243A1B2F0033C838 /* gallo .mp4 */; };
+		CA6E44D9243A1B380033C838 /* coccole .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4497243A1B2F0033C838 /* coccole .mp4 */; };
+		CA6E44DA243A1B380033C838 /* giallo  .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4498243A1B2F0033C838 /* giallo  .mp4 */; };
+		CA6E44DB243A1B380033C838 /* rosso.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4499243A1B2F0033C838 /* rosso.mp4 */; };
+		CA6E44DC243A1B380033C838 /* giallo .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E449A243A1B2F0033C838 /* giallo .mp4 */; };
+		CA6E44DD243A1B380033C838 /* salsiccia.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E449B243A1B2F0033C838 /* salsiccia.mp4 */; };
+		CA6E44DE243A1B380033C838 /* tutto.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E449C243A1B300033C838 /* tutto.mp4 */; };
+		CA6E44DF243A1B380033C838 /* bimbo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E449D243A1B300033C838 /* bimbo.mp4 */; };
+		CA6E44E0243A1B380033C838 /* blu .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E449E243A1B300033C838 /* blu .mp4 */; };
+		CA6E44E1243A1B380033C838 /* patata.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E449F243A1B300033C838 /* patata.mp4 */; };
+		CA6E44E2243A1B380033C838 /* calze.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A0243A1B300033C838 /* calze.mp4 */; };
+		CA6E44E3243A1B380033C838 /* erba.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A1243A1B310033C838 /* erba.mp4 */; };
+		CA6E44E4243A1B380033C838 /* macchina.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A2243A1B310033C838 /* macchina.mp4 */; };
+		CA6E44E5243A1B380033C838 /* gallo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A3243A1B310033C838 /* gallo.mp4 */; };
+		CA6E44E6243A1B380033C838 /* ma basta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A4243A1B310033C838 /* ma basta.mp4 */; };
+		CA6E44E7243A1B380033C838 /* giallo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A5243A1B310033C838 /* giallo.mp4 */; };
+		CA6E44E8243A1B380033C838 /* coccole.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A6243A1B320033C838 /* coccole.mp4 */; };
+		CA6E44E9243A1B380033C838 /* salta .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A7243A1B320033C838 /* salta .mp4 */; };
+		CA6E44EA243A1B380033C838 /* asinello.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A8243A1B320033C838 /* asinello.mp4 */; };
+		CA6E44EB243A1B380033C838 /* scivolo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44A9243A1B320033C838 /* scivolo.mp4 */; };
+		CA6E44EC243A1B380033C838 /* pistola.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44AA243A1B330033C838 /* pistola.mp4 */; };
+		CA6E44ED243A1B380033C838 /* calze .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44AB243A1B330033C838 /* calze .mp4 */; };
+		CA6E44EE243A1B380033C838 /* brutto.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44AC243A1B330033C838 /* brutto.mp4 */; };
+		CA6E44EF243A1B380033C838 /* pantaloni.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44AD243A1B330033C838 /* pantaloni.mp4 */; };
+		CA6E44F0243A1B380033C838 /* scale .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44AE243A1B330033C838 /* scale .mp4 */; };
+		CA6E44F1243A1B380033C838 /* paglia.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44AF243A1B340033C838 /* paglia.mp4 */; };
+		CA6E44F2243A1B380033C838 /* blu.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B0243A1B340033C838 /* blu.mp4 */; };
+		CA6E44F3243A1B380033C838 /* fiori.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B1243A1B340033C838 /* fiori.mp4 */; };
+		CA6E44F4243A1B380033C838 /* mucca.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B2243A1B340033C838 /* mucca.mp4 */; };
+		CA6E44F5243A1B380033C838 /* delfino.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B3243A1B340033C838 /* delfino.mp4 */; };
+		CA6E44F6243A1B380033C838 /* bimbo .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B4243A1B350033C838 /* bimbo .mp4 */; };
+		CA6E44F7243A1B380033C838 /* coccole  .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B5243A1B350033C838 /* coccole  .mp4 */; };
+		CA6E44F8243A1B380033C838 /* macchina .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B6243A1B350033C838 /* macchina .mp4 */; };
+		CA6E44F9243A1B380033C838 /* pantaloni .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B7243A1B350033C838 /* pantaloni .mp4 */; };
+		CA6E44FA243A1B380033C838 /* maglietta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B8243A1B350033C838 /* maglietta.mp4 */; };
+		CA6E44FB243A1B380033C838 /* sbagliato.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44B9243A1B360033C838 /* sbagliato.mp4 */; };
+		CA6E44FC243A1B380033C838 /* scale  .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44BA243A1B360033C838 /* scale  .mp4 */; };
+		CA6E44FD243A1B380033C838 /* si.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44BB243A1B360033C838 /* si.mp4 */; };
+		CA6E44FE243A1B380033C838 /* pizza.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44BC243A1B360033C838 /* pizza.mp4 */; };
+		CA6E44FF243A1B380033C838 /* pancia.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44BD243A1B360033C838 /* pancia.mp4 */; };
+		CA6E4500243A1B380033C838 /* chichirichi.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44BE243A1B370033C838 /* chichirichi.mp4 */; };
+		CA6E4501243A1B380033C838 /* gallo   .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44BF243A1B370033C838 /* gallo   .mp4 */; };
+		CA6E4502243A1B380033C838 /* verde.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44C0243A1B370033C838 /* verde.mp4 */; };
+		CA6E4503243A1B380033C838 /* pecora.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44C1243A1B370033C838 /* pecora.mp4 */; };
+		CA6E4504243A1B380033C838 /* si .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44C2243A1B370033C838 /* si .mp4 */; };
+		CA6E4505243A1B380033C838 /* salta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44C3243A1B380033C838 /* salta.mp4 */; };
+		CA6E4507243A1D310033C838 /* listaMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4506243A1D310033C838 /* listaMovie.json */; };
 		CADD37A024361D2F00A94017 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD379F24361D2F00A94017 /* AppDelegate.m */; };
-		CADD37A324361D2F00A94017 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37A224361D2F00A94017 /* SceneDelegate.m */; };
 		CADD37A624361D2F00A94017 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37A524361D2F00A94017 /* FirstViewController.m */; };
-		CADD37A924361D2F00A94017 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37A824361D2F00A94017 /* SecondViewController.m */; };
+		CADD37A924361D2F00A94017 /* MainGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37A824361D2F00A94017 /* MainGameVC.m */; };
 		CADD37AC24361D2F00A94017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADD37AA24361D2F00A94017 /* Main.storyboard */; };
 		CADD37AE24361D3100A94017 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CADD37AD24361D3100A94017 /* Assets.xcassets */; };
 		CADD37B124361D3100A94017 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CADD37AF24361D3100A94017 /* LaunchScreen.storyboard */; };
 		CADD37B424361D3100A94017 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37B324361D3100A94017 /* main.m */; };
+		CADD380A24362B0A00A94017 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CADD380924362B0A00A94017 /* AVKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA6E447F243A1B050033C838 /* MoviesAndWords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviesAndWords.m; sourceTree = "<group>"; };
+		CA6E4480243A1B050033C838 /* MoviesAndWords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoviesAndWords.h; sourceTree = "<group>"; };
+		CA6E4482243A1B2C0033C838 /* testa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testa.mp4; sourceTree = "<group>"; };
+		CA6E4483243A1B2C0033C838 /* pappa.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pappa.mp4; sourceTree = "<group>"; };
+		CA6E4484243A1B2C0033C838 /* prato.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = prato.mp4; sourceTree = "<group>"; };
+		CA6E4485243A1B2C0033C838 /* zucchina.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = zucchina.mp4; sourceTree = "<group>"; };
+		CA6E4486243A1B2C0033C838 /* paglia .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "paglia .mp4"; sourceTree = "<group>"; };
+		CA6E4487243A1B2D0033C838 /* carota .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "carota .mp4"; sourceTree = "<group>"; };
+		CA6E4488243A1B2D0033C838 /* maiale.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = maiale.mp4; sourceTree = "<group>"; };
+		CA6E4489243A1B2D0033C838 /* arancio .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "arancio .mp4"; sourceTree = "<group>"; };
+		CA6E448A243A1B2D0033C838 /* mano.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mano.mp4; sourceTree = "<group>"; };
+		CA6E448B243A1B2D0033C838 /* sbagliato .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sbagliato .mp4"; sourceTree = "<group>"; };
+		CA6E448C243A1B2D0033C838 /* basta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = basta.mp4; sourceTree = "<group>"; };
+		CA6E448D243A1B2D0033C838 /* gallo  .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gallo  .mp4"; sourceTree = "<group>"; };
+		CA6E448E243A1B2E0033C838 /* gallo    .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gallo    .mp4"; sourceTree = "<group>"; };
+		CA6E448F243A1B2E0033C838 /* sali.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sali.mp4; sourceTree = "<group>"; };
+		CA6E4490243A1B2E0033C838 /* carota.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = carota.mp4; sourceTree = "<group>"; };
+		CA6E4491243A1B2E0033C838 /* arancio.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = arancio.mp4; sourceTree = "<group>"; };
+		CA6E4492243A1B2E0033C838 /* pizza .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pizza .mp4"; sourceTree = "<group>"; };
+		CA6E4493243A1B2E0033C838 /* hi-oh.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hi-oh.mp4"; sourceTree = "<group>"; };
+		CA6E4494243A1B2E0033C838 /* salvietta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = salvietta.mp4; sourceTree = "<group>"; };
+		CA6E4495243A1B2F0033C838 /* scale.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = scale.mp4; sourceTree = "<group>"; };
+		CA6E4496243A1B2F0033C838 /* gallo .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gallo .mp4"; sourceTree = "<group>"; };
+		CA6E4497243A1B2F0033C838 /* coccole .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coccole .mp4"; sourceTree = "<group>"; };
+		CA6E4498243A1B2F0033C838 /* giallo  .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "giallo  .mp4"; sourceTree = "<group>"; };
+		CA6E4499243A1B2F0033C838 /* rosso.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = rosso.mp4; sourceTree = "<group>"; };
+		CA6E449A243A1B2F0033C838 /* giallo .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "giallo .mp4"; sourceTree = "<group>"; };
+		CA6E449B243A1B2F0033C838 /* salsiccia.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = salsiccia.mp4; sourceTree = "<group>"; };
+		CA6E449C243A1B300033C838 /* tutto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = tutto.mp4; sourceTree = "<group>"; };
+		CA6E449D243A1B300033C838 /* bimbo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = bimbo.mp4; sourceTree = "<group>"; };
+		CA6E449E243A1B300033C838 /* blu .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blu .mp4"; sourceTree = "<group>"; };
+		CA6E449F243A1B300033C838 /* patata.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = patata.mp4; sourceTree = "<group>"; };
+		CA6E44A0243A1B300033C838 /* calze.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = calze.mp4; sourceTree = "<group>"; };
+		CA6E44A1243A1B310033C838 /* erba.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = erba.mp4; sourceTree = "<group>"; };
+		CA6E44A2243A1B310033C838 /* macchina.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = macchina.mp4; sourceTree = "<group>"; };
+		CA6E44A3243A1B310033C838 /* gallo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = gallo.mp4; sourceTree = "<group>"; };
+		CA6E44A4243A1B310033C838 /* ma basta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ma basta.mp4"; sourceTree = "<group>"; };
+		CA6E44A5243A1B310033C838 /* giallo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = giallo.mp4; sourceTree = "<group>"; };
+		CA6E44A6243A1B320033C838 /* coccole.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = coccole.mp4; sourceTree = "<group>"; };
+		CA6E44A7243A1B320033C838 /* salta .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "salta .mp4"; sourceTree = "<group>"; };
+		CA6E44A8243A1B320033C838 /* asinello.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = asinello.mp4; sourceTree = "<group>"; };
+		CA6E44A9243A1B320033C838 /* scivolo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = scivolo.mp4; sourceTree = "<group>"; };
+		CA6E44AA243A1B330033C838 /* pistola.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pistola.mp4; sourceTree = "<group>"; };
+		CA6E44AB243A1B330033C838 /* calze .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "calze .mp4"; sourceTree = "<group>"; };
+		CA6E44AC243A1B330033C838 /* brutto.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = brutto.mp4; sourceTree = "<group>"; };
+		CA6E44AD243A1B330033C838 /* pantaloni.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pantaloni.mp4; sourceTree = "<group>"; };
+		CA6E44AE243A1B330033C838 /* scale .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scale .mp4"; sourceTree = "<group>"; };
+		CA6E44AF243A1B340033C838 /* paglia.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = paglia.mp4; sourceTree = "<group>"; };
+		CA6E44B0243A1B340033C838 /* blu.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = blu.mp4; sourceTree = "<group>"; };
+		CA6E44B1243A1B340033C838 /* fiori.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fiori.mp4; sourceTree = "<group>"; };
+		CA6E44B2243A1B340033C838 /* mucca.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = mucca.mp4; sourceTree = "<group>"; };
+		CA6E44B3243A1B340033C838 /* delfino.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = delfino.mp4; sourceTree = "<group>"; };
+		CA6E44B4243A1B350033C838 /* bimbo .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bimbo .mp4"; sourceTree = "<group>"; };
+		CA6E44B5243A1B350033C838 /* coccole  .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coccole  .mp4"; sourceTree = "<group>"; };
+		CA6E44B6243A1B350033C838 /* macchina .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "macchina .mp4"; sourceTree = "<group>"; };
+		CA6E44B7243A1B350033C838 /* pantaloni .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pantaloni .mp4"; sourceTree = "<group>"; };
+		CA6E44B8243A1B350033C838 /* maglietta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = maglietta.mp4; sourceTree = "<group>"; };
+		CA6E44B9243A1B360033C838 /* sbagliato.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = sbagliato.mp4; sourceTree = "<group>"; };
+		CA6E44BA243A1B360033C838 /* scale  .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "scale  .mp4"; sourceTree = "<group>"; };
+		CA6E44BB243A1B360033C838 /* si.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = si.mp4; sourceTree = "<group>"; };
+		CA6E44BC243A1B360033C838 /* pizza.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pizza.mp4; sourceTree = "<group>"; };
+		CA6E44BD243A1B360033C838 /* pancia.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pancia.mp4; sourceTree = "<group>"; };
+		CA6E44BE243A1B370033C838 /* chichirichi.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = chichirichi.mp4; sourceTree = "<group>"; };
+		CA6E44BF243A1B370033C838 /* gallo   .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gallo   .mp4"; sourceTree = "<group>"; };
+		CA6E44C0243A1B370033C838 /* verde.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = verde.mp4; sourceTree = "<group>"; };
+		CA6E44C1243A1B370033C838 /* pecora.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = pecora.mp4; sourceTree = "<group>"; };
+		CA6E44C2243A1B370033C838 /* si .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "si .mp4"; sourceTree = "<group>"; };
+		CA6E44C3243A1B380033C838 /* salta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = salta.mp4; sourceTree = "<group>"; };
+		CA6E4506243A1D310033C838 /* listaMovie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listaMovie.json; sourceTree = "<group>"; };
 		CADD379B24361D2F00A94017 /* Mastro Pietro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mastro Pietro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADD379E24361D2F00A94017 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CADD379F24361D2F00A94017 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -25,13 +162,14 @@
 		CADD37A224361D2F00A94017 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		CADD37A424361D2F00A94017 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		CADD37A524361D2F00A94017 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		CADD37A724361D2F00A94017 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		CADD37A824361D2F00A94017 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CADD37A724361D2F00A94017 /* MainGameVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainGameVC.h; sourceTree = "<group>"; };
+		CADD37A824361D2F00A94017 /* MainGameVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainGameVC.m; sourceTree = "<group>"; };
 		CADD37AB24361D2F00A94017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CADD37AD24361D3100A94017 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CADD37B024361D3100A94017 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CADD37B224361D3100A94017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CADD37B324361D3100A94017 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CADD380924362B0A00A94017 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +177,102 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADD380A24362B0A00A94017 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA38D38A243776F400E3B70D /* mp4 */ = {
+			isa = PBXGroup;
+			children = (
+				CA6E4489243A1B2D0033C838 /* arancio .mp4 */,
+				CA6E4491243A1B2E0033C838 /* arancio.mp4 */,
+				CA6E44A8243A1B320033C838 /* asinello.mp4 */,
+				CA6E448C243A1B2D0033C838 /* basta.mp4 */,
+				CA6E44B4243A1B350033C838 /* bimbo .mp4 */,
+				CA6E449D243A1B300033C838 /* bimbo.mp4 */,
+				CA6E449E243A1B300033C838 /* blu .mp4 */,
+				CA6E44B0243A1B340033C838 /* blu.mp4 */,
+				CA6E44AC243A1B330033C838 /* brutto.mp4 */,
+				CA6E44AB243A1B330033C838 /* calze .mp4 */,
+				CA6E44A0243A1B300033C838 /* calze.mp4 */,
+				CA6E4487243A1B2D0033C838 /* carota .mp4 */,
+				CA6E4490243A1B2E0033C838 /* carota.mp4 */,
+				CA6E44BE243A1B370033C838 /* chichirichi.mp4 */,
+				CA6E44B5243A1B350033C838 /* coccole  .mp4 */,
+				CA6E4497243A1B2F0033C838 /* coccole .mp4 */,
+				CA6E44A6243A1B320033C838 /* coccole.mp4 */,
+				CA6E44B3243A1B340033C838 /* delfino.mp4 */,
+				CA6E44A1243A1B310033C838 /* erba.mp4 */,
+				CA6E44B1243A1B340033C838 /* fiori.mp4 */,
+				CA6E448E243A1B2E0033C838 /* gallo    .mp4 */,
+				CA6E44BF243A1B370033C838 /* gallo   .mp4 */,
+				CA6E448D243A1B2D0033C838 /* gallo  .mp4 */,
+				CA6E4496243A1B2F0033C838 /* gallo .mp4 */,
+				CA6E44A3243A1B310033C838 /* gallo.mp4 */,
+				CA6E4498243A1B2F0033C838 /* giallo  .mp4 */,
+				CA6E449A243A1B2F0033C838 /* giallo .mp4 */,
+				CA6E44A5243A1B310033C838 /* giallo.mp4 */,
+				CA6E4493243A1B2E0033C838 /* hi-oh.mp4 */,
+				CA6E44A4243A1B310033C838 /* ma basta.mp4 */,
+				CA6E44B6243A1B350033C838 /* macchina .mp4 */,
+				CA6E44A2243A1B310033C838 /* macchina.mp4 */,
+				CA6E44B8243A1B350033C838 /* maglietta.mp4 */,
+				CA6E4488243A1B2D0033C838 /* maiale.mp4 */,
+				CA6E448A243A1B2D0033C838 /* mano.mp4 */,
+				CA6E44B2243A1B340033C838 /* mucca.mp4 */,
+				CA6E4486243A1B2C0033C838 /* paglia .mp4 */,
+				CA6E44AF243A1B340033C838 /* paglia.mp4 */,
+				CA6E44BD243A1B360033C838 /* pancia.mp4 */,
+				CA6E44B7243A1B350033C838 /* pantaloni .mp4 */,
+				CA6E44AD243A1B330033C838 /* pantaloni.mp4 */,
+				CA6E4483243A1B2C0033C838 /* pappa.mp4 */,
+				CA6E449F243A1B300033C838 /* patata.mp4 */,
+				CA6E44C1243A1B370033C838 /* pecora.mp4 */,
+				CA6E44AA243A1B330033C838 /* pistola.mp4 */,
+				CA6E4492243A1B2E0033C838 /* pizza .mp4 */,
+				CA6E44BC243A1B360033C838 /* pizza.mp4 */,
+				CA6E4484243A1B2C0033C838 /* prato.mp4 */,
+				CA6E4499243A1B2F0033C838 /* rosso.mp4 */,
+				CA6E448F243A1B2E0033C838 /* sali.mp4 */,
+				CA6E449B243A1B2F0033C838 /* salsiccia.mp4 */,
+				CA6E44A7243A1B320033C838 /* salta .mp4 */,
+				CA6E44C3243A1B380033C838 /* salta.mp4 */,
+				CA6E4494243A1B2E0033C838 /* salvietta.mp4 */,
+				CA6E448B243A1B2D0033C838 /* sbagliato .mp4 */,
+				CA6E44B9243A1B360033C838 /* sbagliato.mp4 */,
+				CA6E44BA243A1B360033C838 /* scale  .mp4 */,
+				CA6E44AE243A1B330033C838 /* scale .mp4 */,
+				CA6E4495243A1B2F0033C838 /* scale.mp4 */,
+				CA6E44A9243A1B320033C838 /* scivolo.mp4 */,
+				CA6E44C2243A1B370033C838 /* si .mp4 */,
+				CA6E44BB243A1B360033C838 /* si.mp4 */,
+				CA6E4482243A1B2C0033C838 /* testa.mp4 */,
+				CA6E449C243A1B300033C838 /* tutto.mp4 */,
+				CA6E44C0243A1B370033C838 /* verde.mp4 */,
+				CA6E4485243A1B2C0033C838 /* zucchina.mp4 */,
+			);
+			path = mp4;
+			sourceTree = "<group>";
+		};
+		CA6E447E243A1B050033C838 /* beans */ = {
+			isa = PBXGroup;
+			children = (
+				CA6E4506243A1D310033C838 /* listaMovie.json */,
+				CA6E4480243A1B050033C838 /* MoviesAndWords.h */,
+				CA6E447F243A1B050033C838 /* MoviesAndWords.m */,
+			);
+			path = beans;
+			sourceTree = "<group>";
+		};
 		CADD379224361D2F00A94017 = {
 			isa = PBXGroup;
 			children = (
 				CADD379D24361D2F00A94017 /* Mastro Pietro */,
 				CADD379C24361D2F00A94017 /* Products */,
+				CADD380824362B0A00A94017 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,14 +287,17 @@
 		CADD379D24361D2F00A94017 /* Mastro Pietro */ = {
 			isa = PBXGroup;
 			children = (
+				CA6E447E243A1B050033C838 /* beans */,
+				CA38D38A243776F400E3B70D /* mp4 */,
+				CADD380724362A0E00A94017 /* Views */,
 				CADD379E24361D2F00A94017 /* AppDelegate.h */,
 				CADD379F24361D2F00A94017 /* AppDelegate.m */,
 				CADD37A124361D2F00A94017 /* SceneDelegate.h */,
 				CADD37A224361D2F00A94017 /* SceneDelegate.m */,
 				CADD37A424361D2F00A94017 /* FirstViewController.h */,
 				CADD37A524361D2F00A94017 /* FirstViewController.m */,
-				CADD37A724361D2F00A94017 /* SecondViewController.h */,
-				CADD37A824361D2F00A94017 /* SecondViewController.m */,
+				CADD37A724361D2F00A94017 /* MainGameVC.h */,
+				CADD37A824361D2F00A94017 /* MainGameVC.m */,
 				CADD37AA24361D2F00A94017 /* Main.storyboard */,
 				CADD37AD24361D3100A94017 /* Assets.xcassets */,
 				CADD37AF24361D3100A94017 /* LaunchScreen.storyboard */,
@@ -79,6 +305,21 @@
 				CADD37B324361D3100A94017 /* main.m */,
 			);
 			path = "Mastro Pietro";
+			sourceTree = "<group>";
+		};
+		CADD380724362A0E00A94017 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CADD380824362B0A00A94017 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CADD380924362B0A00A94017 /* AVKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +379,76 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6E44CB243A1B380033C838 /* arancio .mp4 in Resources */,
+				CA6E44D2243A1B380033C838 /* carota.mp4 in Resources */,
+				CA6E44EF243A1B380033C838 /* pantaloni.mp4 in Resources */,
+				CA6E4500243A1B380033C838 /* chichirichi.mp4 in Resources */,
+				CA6E44E2243A1B380033C838 /* calze.mp4 in Resources */,
+				CA6E44C7243A1B380033C838 /* zucchina.mp4 in Resources */,
+				CA6E44D8243A1B380033C838 /* gallo .mp4 in Resources */,
+				CA6E44EE243A1B380033C838 /* brutto.mp4 in Resources */,
+				CA6E44D4243A1B380033C838 /* pizza .mp4 in Resources */,
+				CA6E44C4243A1B380033C838 /* testa.mp4 in Resources */,
+				CA6E44D5243A1B380033C838 /* hi-oh.mp4 in Resources */,
+				CA6E44E9243A1B380033C838 /* salta .mp4 in Resources */,
+				CA6E44E0243A1B380033C838 /* blu .mp4 in Resources */,
+				CA6E44E1243A1B380033C838 /* patata.mp4 in Resources */,
+				CA6E44CE243A1B380033C838 /* basta.mp4 in Resources */,
+				CA6E44C9243A1B380033C838 /* carota .mp4 in Resources */,
+				CA6E44FA243A1B380033C838 /* maglietta.mp4 in Resources */,
+				CA6E44F5243A1B380033C838 /* delfino.mp4 in Resources */,
+				CA6E44DE243A1B380033C838 /* tutto.mp4 in Resources */,
+				CA6E44DA243A1B380033C838 /* giallo  .mp4 in Resources */,
+				CA6E44E8243A1B380033C838 /* coccole.mp4 in Resources */,
+				CA6E44ED243A1B380033C838 /* calze .mp4 in Resources */,
+				CA6E44DB243A1B380033C838 /* rosso.mp4 in Resources */,
+				CA6E44FB243A1B380033C838 /* sbagliato.mp4 in Resources */,
+				CA6E4504243A1B380033C838 /* si .mp4 in Resources */,
 				CADD37B124361D3100A94017 /* LaunchScreen.storyboard in Resources */,
+				CA6E44D3243A1B380033C838 /* arancio.mp4 in Resources */,
+				CA6E44E7243A1B380033C838 /* giallo.mp4 in Resources */,
+				CA6E44E5243A1B380033C838 /* gallo.mp4 in Resources */,
+				CA6E44C5243A1B380033C838 /* pappa.mp4 in Resources */,
+				CA6E44CC243A1B380033C838 /* mano.mp4 in Resources */,
+				CA6E44CD243A1B380033C838 /* sbagliato .mp4 in Resources */,
+				CA6E44DF243A1B380033C838 /* bimbo.mp4 in Resources */,
+				CA6E44EB243A1B380033C838 /* scivolo.mp4 in Resources */,
+				CA6E4507243A1D310033C838 /* listaMovie.json in Resources */,
+				CA6E44F3243A1B380033C838 /* fiori.mp4 in Resources */,
+				CA6E44F9243A1B380033C838 /* pantaloni .mp4 in Resources */,
+				CA6E44CF243A1B380033C838 /* gallo  .mp4 in Resources */,
 				CADD37AE24361D3100A94017 /* Assets.xcassets in Resources */,
+				CA6E44DD243A1B380033C838 /* salsiccia.mp4 in Resources */,
+				CA6E44FD243A1B380033C838 /* si.mp4 in Resources */,
+				CA6E44C6243A1B380033C838 /* prato.mp4 in Resources */,
+				CA6E44F2243A1B380033C838 /* blu.mp4 in Resources */,
+				CA6E44E3243A1B380033C838 /* erba.mp4 in Resources */,
+				CA6E44DC243A1B380033C838 /* giallo .mp4 in Resources */,
+				CA6E44F1243A1B380033C838 /* paglia.mp4 in Resources */,
+				CA6E44F4243A1B380033C838 /* mucca.mp4 in Resources */,
+				CA6E44D9243A1B380033C838 /* coccole .mp4 in Resources */,
+				CA6E44E6243A1B380033C838 /* ma basta.mp4 in Resources */,
+				CA6E44D7243A1B380033C838 /* scale.mp4 in Resources */,
+				CA6E4502243A1B380033C838 /* verde.mp4 in Resources */,
+				CA6E44EA243A1B380033C838 /* asinello.mp4 in Resources */,
+				CA6E44F7243A1B380033C838 /* coccole  .mp4 in Resources */,
+				CA6E44D0243A1B380033C838 /* gallo    .mp4 in Resources */,
+				CA6E44FE243A1B380033C838 /* pizza.mp4 in Resources */,
+				CA6E44FC243A1B380033C838 /* scale  .mp4 in Resources */,
+				CA6E44EC243A1B380033C838 /* pistola.mp4 in Resources */,
+				CA6E4503243A1B380033C838 /* pecora.mp4 in Resources */,
+				CA6E44FF243A1B380033C838 /* pancia.mp4 in Resources */,
 				CADD37AC24361D2F00A94017 /* Main.storyboard in Resources */,
+				CA6E4505243A1B380033C838 /* salta.mp4 in Resources */,
+				CA6E4501243A1B380033C838 /* gallo   .mp4 in Resources */,
+				CA6E44D6243A1B380033C838 /* salvietta.mp4 in Resources */,
+				CA6E44E4243A1B380033C838 /* macchina.mp4 in Resources */,
+				CA6E44C8243A1B380033C838 /* paglia .mp4 in Resources */,
+				CA6E44D1243A1B380033C838 /* sali.mp4 in Resources */,
+				CA6E44F0243A1B380033C838 /* scale .mp4 in Resources */,
+				CA6E44F6243A1B380033C838 /* bimbo .mp4 in Resources */,
+				CA6E44CA243A1B380033C838 /* maiale.mp4 in Resources */,
+				CA6E44F8243A1B380033C838 /* macchina .mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,10 +460,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CADD37B424361D3100A94017 /* main.m in Sources */,
-				CADD37A924361D2F00A94017 /* SecondViewController.m in Sources */,
+				CADD37A924361D2F00A94017 /* MainGameVC.m in Sources */,
 				CADD37A024361D2F00A94017 /* AppDelegate.m in Sources */,
+				CA6E4481243A1B050033C838 /* MoviesAndWords.m in Sources */,
 				CADD37A624361D2F00A94017 /* FirstViewController.m in Sources */,
-				CADD37A324361D2F00A94017 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +539,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -283,7 +591,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
