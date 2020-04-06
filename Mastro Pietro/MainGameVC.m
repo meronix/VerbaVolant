@@ -11,16 +11,21 @@
 #import <AVKit/AVKit.h>
 #import "MoviesAndWords.h"
 #import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
+
 
 @interface MainGameVC ()
 
 @property (nonatomic, strong) AVPlayerViewController* playerController;
 
 @property (strong, nonatomic) IBOutlet UIView *quizView;
+
 @property (strong, nonatomic) IBOutlet UIButton *b_answer_1;
 @property (strong, nonatomic) IBOutlet UIButton *b_answer_2;
 @property (strong, nonatomic) IBOutlet UIButton *b_answer_3;
 @property (strong, nonatomic) IBOutlet UIButton *b_answer_4;
+@property (strong, nonatomic) IBOutlet UIButton *continuaButton;
+@property (strong, nonatomic) IBOutlet UIButton *esciButton;
 
 
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
@@ -28,7 +33,6 @@
 @property (strong, nonatomic) IBOutlet UIView *boxQuestionButtons;
 @property (strong, nonatomic) IBOutlet UILabel *message;
 @property (strong, nonatomic) IBOutlet UIView *boxContinueButtons;
-@property (strong, nonatomic) IBOutlet UIButton *continuaButton;
 
 @property (nonatomic, strong) MoviesAndWords * myMoviesAndWords;
 @property (nonatomic, strong) NSMutableArray * toBePlayedMovies;
@@ -51,7 +55,15 @@
     [super viewDidLoad];
     self.quizView.alpha = 0;
     [self loadJsonData];
-    // Do any additional setup after loading the view.
+    
+    CGFloat cornerRad = 6;
+    NSArray* tempArray = @[_b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4, _continuaButton, _esciButton];
+    for (UIButton* aButt in tempArray) {
+        aButt.layer.cornerRadius = cornerRad;
+        aButt.layer.borderWidth = 1;
+        aButt.clipsToBounds = YES;
+    }
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -191,17 +203,26 @@
     NSLog(@"sender: %@", sender);
     BOOL playAnswer = YES;
     BOOL correctAnswer = YES;
+    
+    NSArray* tempArray = @[_b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4];
+    for (UIButton* aButt in tempArray) {
+        aButt.userInteractionEnabled = NO;
+        aButt.alpha = .2;
+    }
+    
+    sender.alpha = 1;
+    
     if (sender.tag == 1) {
         //        sender.backgroundColor = [UIColor greenColor];
         self.answers_total ++;
         self.answers_correct ++;
-//        [self performSelector:@selector(hideDelayedForAnswer:) withObject:sender afterDelay:.3];
+        //        [self performSelector:@selector(hideDelayedForAnswer:) withObject:sender afterDelay:.3];
         [self hideDelayedForAnswer:sender];
     } else if (sender.tag == 0){
         //        sender.backgroundColor = [UIColor redColor];
         correctAnswer = NO;
         self.answers_total ++;
-    //    [self performSelector:@selector(hideDelayedForAnswer:) withObject:sender afterDelay:.3];
+        //    [self performSelector:@selector(hideDelayedForAnswer:) withObject:sender afterDelay:.3];
         [self hideDelayedForAnswer:sender];
     } else if (sender.tag == 2){
         playAnswer = NO;
@@ -304,6 +325,8 @@
     for (UIButton* aButt in tempArray) {
         aButt.tag = 0;
         aButt.backgroundColor = [UIColor colorWithRed:.2 green:.2 blue:.4 alpha:.7];
+        aButt.userInteractionEnabled = YES;
+        aButt.alpha = 1;
     }
     int indexOk = arc4random() % tempArray.count;
     UIButton * tempButon = tempArray[indexOk];

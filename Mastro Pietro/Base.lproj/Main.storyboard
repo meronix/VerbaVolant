@@ -6,6 +6,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Polsyh.ttf">
+            <string>Polsyh</string>
+        </array>
+        <array key="Risaltyp_024.ttf">
+            <string>Risaltyp</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
@@ -82,6 +90,7 @@
                                                         <rect key="frame" x="6" y="8" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="24"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="JCF-kC-MCK"/>
@@ -91,6 +100,7 @@
                                                         <rect key="frame" x="244" y="8" width="230" height="29"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="24"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XDB-Qz-FSJ"/>
@@ -100,6 +110,7 @@
                                                         <rect key="frame" x="6" y="44" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="24"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="H8J-5s-KYe"/>
@@ -109,25 +120,27 @@
                                                         <rect key="frame" x="244" y="44" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="24"/>
                                                         <state key="normal" title="Button"/>
                                                         <connections>
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="dTA-ld-Iy4"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
-                                                <color key="backgroundColor" white="1" alpha="0.22381161971830985" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" white="1" alpha="0.65732284330985913" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnn-Jv-JIl">
-                                                <rect key="frame" x="0.0" y="205" width="480" height="32"/>
+                                                <rect key="frame" x="0.0" y="212" width="480" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30F-oY-twd">
-                                                        <rect key="frame" x="409" y="8" width="65" height="24"/>
+                                                    <button alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30F-oY-twd">
+                                                        <rect key="frame" x="357" y="0.0" width="100" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <color key="backgroundColor" red="0.0" green="0.68131512400000005" blue="0.1078287736" alpha="0.75470400528591552" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                        <state key="normal" title="replay">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="20"/>
+                                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="↺ replay" backgroundImage="schedaBox.png">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="replayButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Z6J-FQ-QYb"/>
@@ -143,18 +156,18 @@
                                         <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="pChe cosa ho detto?" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-vU-HlF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Che cosa ho detto?" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX6-vU-HlF">
                                                 <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Polsyh" family="Polsyh" pointSize="26"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2k-W7-TB8">
-                                                <rect key="frame" x="190" y="39" width="277" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2k-W7-TB8">
+                                                <rect key="frame" x="190" y="35" width="277" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -166,10 +179,10 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-33-pyz">
-                                                <rect key="frame" x="88.272246307391242" y="0.0" width="129.99999999999994" height="32.000000000000057"/>
+                                                <rect key="frame" x="88.5" y="0.0" width="130" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.68131512400000005" blue="0.1078287736" alpha="0.75874779929577463" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="24"/>
                                                 <state key="normal" title="esci">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -178,9 +191,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6aH-Xf-gMw">
-                                                <rect key="frame" x="260" y="-1" width="130" height="32"/>
+                                                <rect key="frame" x="260" y="0.0" width="130" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.68131512400000005" blue="0.1078287736" alpha="0.75407130280000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="24"/>
                                                 <state key="normal" title="continua"/>
                                                 <connections>
                                                     <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="eGh-fk-hxg"/>
@@ -193,7 +207,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" id="y73-Io-fmu"/>
@@ -205,6 +219,7 @@
                         <outlet property="boxContinueButtons" destination="AFd-Hs-0Xu" id="zqA-eg-hIY"/>
                         <outlet property="boxQuestionButtons" destination="OK1-Ld-zxm" id="Wyk-Pw-CKS"/>
                         <outlet property="continuaButton" destination="6aH-Xf-gMw" id="ZbH-du-ulR"/>
+                        <outlet property="esciButton" destination="JJj-33-pyz" id="g9Y-we-BIf"/>
                         <outlet property="message" destination="eX6-vU-HlF" id="0aU-8S-GpU"/>
                         <outlet property="quizView" destination="tjO-FO-R6n" id="95A-b4-Unn"/>
                         <outlet property="scoreLabel" destination="g2k-W7-TB8" id="wuC-gQ-czB"/>
@@ -250,6 +265,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="schedaBox.png" width="100" height="25"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

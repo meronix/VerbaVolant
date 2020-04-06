@@ -75,6 +75,16 @@
 		CA6E4504243A1B380033C838 /* si .mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44C2243A1B370033C838 /* si .mp4 */; };
 		CA6E4505243A1B380033C838 /* salta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CA6E44C3243A1B380033C838 /* salta.mp4 */; };
 		CA6E4507243A1D310033C838 /* listaMovie.json in Resources */ = {isa = PBXBuildFile; fileRef = CA6E4506243A1D310033C838 /* listaMovie.json */; };
+		CAB3F1C6243B075E0051D1E0 /* schedaBox~ipad@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1C1243B075E0051D1E0 /* schedaBox~ipad@1x.png */; };
+		CAB3F1C7243B075E0051D1E0 /* schedaBox@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1C2243B075E0051D1E0 /* schedaBox@3x.png */; };
+		CAB3F1C8243B075E0051D1E0 /* schedaBox~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1C3243B075E0051D1E0 /* schedaBox~ipad@2x.png */; };
+		CAB3F1C9243B075E0051D1E0 /* schedaBox@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1C4243B075E0051D1E0 /* schedaBox@2x.png */; };
+		CAB3F1CA243B075E0051D1E0 /* schedaBox.png in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1C5243B075E0051D1E0 /* schedaBox.png */; };
+		CAB3F1CF243B154F0051D1E0 /* QumpellkaNo12.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1CC243B154E0051D1E0 /* QumpellkaNo12.otf */; };
+		CAB3F1D0243B154F0051D1E0 /* Tangerine_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1CD243B154E0051D1E0 /* Tangerine_Bold.ttf */; };
+		CAB3F1D1243B154F0051D1E0 /* Tangerine_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1CE243B154E0051D1E0 /* Tangerine_Regular.ttf */; };
+		CAB3F1D3243B1D060051D1E0 /* Polsyh.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1D2243B1D060051D1E0 /* Polsyh.ttf */; };
+		CAB3F1D5243B1E2B0051D1E0 /* Risaltyp_024.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CAB3F1D4243B1E2B0051D1E0 /* Risaltyp_024.ttf */; };
 		CADD37A024361D2F00A94017 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD379F24361D2F00A94017 /* AppDelegate.m */; };
 		CADD37A624361D2F00A94017 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37A524361D2F00A94017 /* FirstViewController.m */; };
 		CADD37A924361D2F00A94017 /* MainGameVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CADD37A824361D2F00A94017 /* MainGameVC.m */; };
@@ -155,6 +165,16 @@
 		CA6E44C2243A1B370033C838 /* si .mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "si .mp4"; sourceTree = "<group>"; };
 		CA6E44C3243A1B380033C838 /* salta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = salta.mp4; sourceTree = "<group>"; };
 		CA6E4506243A1D310033C838 /* listaMovie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listaMovie.json; sourceTree = "<group>"; };
+		CAB3F1C1243B075E0051D1E0 /* schedaBox~ipad@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedaBox~ipad@1x.png"; sourceTree = "<group>"; };
+		CAB3F1C2243B075E0051D1E0 /* schedaBox@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedaBox@3x.png"; sourceTree = "<group>"; };
+		CAB3F1C3243B075E0051D1E0 /* schedaBox~ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedaBox~ipad@2x.png"; sourceTree = "<group>"; };
+		CAB3F1C4243B075E0051D1E0 /* schedaBox@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "schedaBox@2x.png"; sourceTree = "<group>"; };
+		CAB3F1C5243B075E0051D1E0 /* schedaBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = schedaBox.png; sourceTree = "<group>"; };
+		CAB3F1CC243B154E0051D1E0 /* QumpellkaNo12.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = QumpellkaNo12.otf; sourceTree = "<group>"; };
+		CAB3F1CD243B154E0051D1E0 /* Tangerine_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tangerine_Bold.ttf; sourceTree = "<group>"; };
+		CAB3F1CE243B154E0051D1E0 /* Tangerine_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tangerine_Regular.ttf; sourceTree = "<group>"; };
+		CAB3F1D2243B1D060051D1E0 /* Polsyh.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Polsyh.ttf; sourceTree = "<group>"; };
+		CAB3F1D4243B1E2B0051D1E0 /* Risaltyp_024.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Risaltyp_024.ttf; sourceTree = "<group>"; };
 		CADD379B24361D2F00A94017 /* Mastro Pietro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mastro Pietro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CADD379E24361D2F00A94017 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CADD379F24361D2F00A94017 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -267,6 +287,30 @@
 			path = beans;
 			sourceTree = "<group>";
 		};
+		CAB3F1C0243B074E0051D1E0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				CAB3F1C1243B075E0051D1E0 /* schedaBox~ipad@1x.png */,
+				CAB3F1C3243B075E0051D1E0 /* schedaBox~ipad@2x.png */,
+				CAB3F1C5243B075E0051D1E0 /* schedaBox.png */,
+				CAB3F1C4243B075E0051D1E0 /* schedaBox@2x.png */,
+				CAB3F1C2243B075E0051D1E0 /* schedaBox@3x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		CAB3F1CB243B13D60051D1E0 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CAB3F1D2243B1D060051D1E0 /* Polsyh.ttf */,
+				CAB3F1CC243B154E0051D1E0 /* QumpellkaNo12.otf */,
+				CAB3F1CD243B154E0051D1E0 /* Tangerine_Bold.ttf */,
+				CAB3F1CE243B154E0051D1E0 /* Tangerine_Regular.ttf */,
+				CAB3F1D4243B1E2B0051D1E0 /* Risaltyp_024.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		CADD379224361D2F00A94017 = {
 			isa = PBXGroup;
 			children = (
@@ -287,6 +331,8 @@
 		CADD379D24361D2F00A94017 /* Mastro Pietro */ = {
 			isa = PBXGroup;
 			children = (
+				CAB3F1CB243B13D60051D1E0 /* fonts */,
+				CAB3F1C0243B074E0051D1E0 /* images */,
 				CA6E447E243A1B050033C838 /* beans */,
 				CA38D38A243776F400E3B70D /* mp4 */,
 				CADD380724362A0E00A94017 /* Views */,
@@ -379,6 +425,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB3F1C9243B075E0051D1E0 /* schedaBox@2x.png in Resources */,
 				CA6E44CB243A1B380033C838 /* arancio .mp4 in Resources */,
 				CA6E44D2243A1B380033C838 /* carota.mp4 in Resources */,
 				CA6E44EF243A1B380033C838 /* pantaloni.mp4 in Resources */,
@@ -387,6 +434,7 @@
 				CA6E44C7243A1B380033C838 /* zucchina.mp4 in Resources */,
 				CA6E44D8243A1B380033C838 /* gallo .mp4 in Resources */,
 				CA6E44EE243A1B380033C838 /* brutto.mp4 in Resources */,
+				CAB3F1D5243B1E2B0051D1E0 /* Risaltyp_024.ttf in Resources */,
 				CA6E44D4243A1B380033C838 /* pizza .mp4 in Resources */,
 				CA6E44C4243A1B380033C838 /* testa.mp4 in Resources */,
 				CA6E44D5243A1B380033C838 /* hi-oh.mp4 in Resources */,
@@ -402,12 +450,14 @@
 				CA6E44E8243A1B380033C838 /* coccole.mp4 in Resources */,
 				CA6E44ED243A1B380033C838 /* calze .mp4 in Resources */,
 				CA6E44DB243A1B380033C838 /* rosso.mp4 in Resources */,
+				CAB3F1C7243B075E0051D1E0 /* schedaBox@3x.png in Resources */,
 				CA6E44FB243A1B380033C838 /* sbagliato.mp4 in Resources */,
 				CA6E4504243A1B380033C838 /* si .mp4 in Resources */,
 				CADD37B124361D3100A94017 /* LaunchScreen.storyboard in Resources */,
 				CA6E44D3243A1B380033C838 /* arancio.mp4 in Resources */,
 				CA6E44E7243A1B380033C838 /* giallo.mp4 in Resources */,
 				CA6E44E5243A1B380033C838 /* gallo.mp4 in Resources */,
+				CAB3F1D0243B154F0051D1E0 /* Tangerine_Bold.ttf in Resources */,
 				CA6E44C5243A1B380033C838 /* pappa.mp4 in Resources */,
 				CA6E44CC243A1B380033C838 /* mano.mp4 in Resources */,
 				CA6E44CD243A1B380033C838 /* sbagliato .mp4 in Resources */,
@@ -415,6 +465,7 @@
 				CA6E44EB243A1B380033C838 /* scivolo.mp4 in Resources */,
 				CA6E4507243A1D310033C838 /* listaMovie.json in Resources */,
 				CA6E44F3243A1B380033C838 /* fiori.mp4 in Resources */,
+				CAB3F1D1243B154F0051D1E0 /* Tangerine_Regular.ttf in Resources */,
 				CA6E44F9243A1B380033C838 /* pantaloni .mp4 in Resources */,
 				CA6E44CF243A1B380033C838 /* gallo  .mp4 in Resources */,
 				CADD37AE24361D3100A94017 /* Assets.xcassets in Resources */,
@@ -428,17 +479,21 @@
 				CA6E44F4243A1B380033C838 /* mucca.mp4 in Resources */,
 				CA6E44D9243A1B380033C838 /* coccole .mp4 in Resources */,
 				CA6E44E6243A1B380033C838 /* ma basta.mp4 in Resources */,
+				CAB3F1C6243B075E0051D1E0 /* schedaBox~ipad@1x.png in Resources */,
 				CA6E44D7243A1B380033C838 /* scale.mp4 in Resources */,
 				CA6E4502243A1B380033C838 /* verde.mp4 in Resources */,
 				CA6E44EA243A1B380033C838 /* asinello.mp4 in Resources */,
 				CA6E44F7243A1B380033C838 /* coccole  .mp4 in Resources */,
+				CAB3F1CF243B154F0051D1E0 /* QumpellkaNo12.otf in Resources */,
 				CA6E44D0243A1B380033C838 /* gallo    .mp4 in Resources */,
 				CA6E44FE243A1B380033C838 /* pizza.mp4 in Resources */,
 				CA6E44FC243A1B380033C838 /* scale  .mp4 in Resources */,
+				CAB3F1D3243B1D060051D1E0 /* Polsyh.ttf in Resources */,
 				CA6E44EC243A1B380033C838 /* pistola.mp4 in Resources */,
 				CA6E4503243A1B380033C838 /* pecora.mp4 in Resources */,
 				CA6E44FF243A1B380033C838 /* pancia.mp4 in Resources */,
 				CADD37AC24361D2F00A94017 /* Main.storyboard in Resources */,
+				CAB3F1CA243B075E0051D1E0 /* schedaBox.png in Resources */,
 				CA6E4505243A1B380033C838 /* salta.mp4 in Resources */,
 				CA6E4501243A1B380033C838 /* gallo   .mp4 in Resources */,
 				CA6E44D6243A1B380033C838 /* salvietta.mp4 in Resources */,
@@ -447,6 +502,7 @@
 				CA6E44D1243A1B380033C838 /* sali.mp4 in Resources */,
 				CA6E44F0243A1B380033C838 /* scale .mp4 in Resources */,
 				CA6E44F6243A1B380033C838 /* bimbo .mp4 in Resources */,
+				CAB3F1C8243B075E0051D1E0 /* schedaBox~ipad@2x.png in Resources */,
 				CA6E44CA243A1B380033C838 /* maiale.mp4 in Resources */,
 				CA6E44F8243A1B380033C838 /* macchina .mp4 in Resources */,
 			);
