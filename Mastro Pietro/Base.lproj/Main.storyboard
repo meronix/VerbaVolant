@@ -133,19 +133,24 @@
                                                 <rect key="frame" x="0.0" y="212" width="480" height="25"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <subviews>
-                                                    <button alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30F-oY-twd">
-                                                        <rect key="frame" x="357" y="0.0" width="100" height="25"/>
+                                                    <button alpha="0.69999999999999996" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30F-oY-twd">
+                                                        <rect key="frame" x="257" y="0.0" width="100" height="25"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="20"/>
                                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="↺ replay" backgroundImage="schedaBox.png">
+                                                        <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                        <state key="normal" title="replay" backgroundImage="schedaBox.png">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="replayButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Z6J-FQ-QYb"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="reload.png" translatesAutoresizingMaskIntoConstraints="NO" id="SHJ-Lv-uRp">
+                                                        <rect key="frame" x="276" y="6" width="16" height="16"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
@@ -175,7 +180,7 @@
                                         <color key="backgroundColor" red="0.0" green="0.68131512400000005" blue="0.1078287736" alpha="0.76188380282112689" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFd-Hs-0Xu">
-                                        <rect key="frame" x="0.0" y="271" width="480" height="32"/>
+                                        <rect key="frame" x="0.0" y="256" width="480" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-33-pyz">
@@ -217,6 +222,7 @@
                         <outlet property="b_answer_3" destination="yek-4e-19X" id="LzN-cb-WUO"/>
                         <outlet property="b_answer_4" destination="fVL-xk-Ulk" id="iUB-lN-mdf"/>
                         <outlet property="boxContinueButtons" destination="AFd-Hs-0Xu" id="zqA-eg-hIY"/>
+                        <outlet property="boxMessage" destination="qU5-jl-dxx" id="RQZ-9V-KOa"/>
                         <outlet property="boxQuestionButtons" destination="OK1-Ld-zxm" id="Wyk-Pw-CKS"/>
                         <outlet property="continuaButton" destination="6aH-Xf-gMw" id="ZbH-du-ulR"/>
                         <outlet property="esciButton" destination="JJj-33-pyz" id="g9Y-we-BIf"/>
@@ -265,6 +271,7 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="reload.png" width="22" height="22"/>
         <image name="schedaBox.png" width="100" height="25"/>
         <image name="second" width="30" height="30"/>
     </resources>

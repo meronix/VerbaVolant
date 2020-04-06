@@ -131,9 +131,7 @@
     "tutto",
     "paglia",
     "scivolo",
-    "gallo ",
     "carota",
-    "gallo  ",
     "giallo ",
     "salsiccia",
     "sbagliato",
@@ -150,9 +148,7 @@
     "basta",
     "gallo",
     "bimbo",
-    "gallo   ",
     "blu ",
-    "gallo    ",
     "macchina",
     "arancio ",
     "giallo",
@@ -174,16 +170,18 @@
     "coccole  ",
     "brutto",
     "scale ",
+    "cane",
+    "gatto miao",
+    "uccellino",
     "delfino"
    ],
   "listaRisposteOK": [
-     "zucchina",
-     "pappa"
+     "gallo",
+     "cane"
      ],
     "listaRisposteKO": [
-       "brutto",
-       "pistola",
-       "asinello"
+       "gatto miao",
+       "uccellino"
     ]
 }
 

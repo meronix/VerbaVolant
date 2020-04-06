@@ -33,6 +33,7 @@
 @property (strong, nonatomic) IBOutlet UIView *boxQuestionButtons;
 @property (strong, nonatomic) IBOutlet UILabel *message;
 @property (strong, nonatomic) IBOutlet UIView *boxContinueButtons;
+@property (strong, nonatomic) IBOutlet UIView *boxMessage;
 
 @property (nonatomic, strong) MoviesAndWords * myMoviesAndWords;
 @property (nonatomic, strong) NSMutableArray * toBePlayedMovies;
@@ -57,13 +58,12 @@
     [self loadJsonData];
     
     CGFloat cornerRad = 6;
-    NSArray* tempArray = @[_b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4, _continuaButton, _esciButton];
-    for (UIButton* aButt in tempArray) {
-        aButt.layer.cornerRadius = cornerRad;
-        aButt.layer.borderWidth = 1;
-        aButt.clipsToBounds = YES;
+    NSArray* tempArray = @[_boxMessage, _b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4, _continuaButton, _esciButton];
+    for (UIView* aView in tempArray) {
+        aView.layer.cornerRadius = cornerRad;
+        aView.layer.borderWidth = 1;
+        aView.clipsToBounds = YES;
     }
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -77,6 +77,7 @@
 
 -(IBAction)startToPlay:(id)sender {
     self.continuaButton.hidden = NO;
+    self.scoreLabel.hidden = YES;
 
     self.boxQuestionButtons.hidden = YES;
 //    self.continuaButton.hidden = YES;
@@ -127,8 +128,10 @@
 - (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (viewController == self.playerController) {
         AVPlayer* player = self.playerController.player;
-        player.automaticallyWaitsToMinimizeStalling = NO;
-        [player playImmediatelyAtRate:1];
+        if ([player respondsToSelector:@selector(setAutomaticallyWaitsToMinimizeStalling:)]) {
+//            player.automaticallyWaitsToMinimizeStalling = NO;
+//            [player playImmediatelyAtRate:1];
+        }
         [player play];
         //   [player performSelector:@selector(play) withObject:nil afterDelay:8];
         [player performSelector:@selector(play) withObject:nil afterDelay:2.5];
@@ -207,7 +210,9 @@
     NSArray* tempArray = @[_b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4];
     for (UIButton* aButt in tempArray) {
         aButt.userInteractionEnabled = NO;
-        aButt.alpha = .2;
+        if (aButt.tag != 1) {
+             aButt.alpha = .2;
+        }
     }
     
     sender.alpha = 1;
@@ -229,6 +234,8 @@
         self.boxQuestionButtons.hidden = NO;
         self.boxContinueButtons.hidden = YES;
     }
+    self.scoreLabel.hidden = NO;
+
     [self updateScoreLabel];
     [self nextLevel_playAnswer:playAnswer withCorrectAnswer:correctAnswer];
     //    [self performSelector:@selector(nextLevel) withObject:nil afterDelay:1];
@@ -238,11 +245,19 @@
     // step 0, do someting
     [UIView animateWithDuration:.6f delay:.0f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
         // step 1, do someting
-        if (sender.tag == 1) {
-            sender.backgroundColor = [UIColor greenColor];
-        } else if (sender.tag == 0){
+        if (sender.tag == 0){
             sender.backgroundColor = [UIColor redColor];
         }
+        
+        NSArray* tempArray = @[self.b_answer_1, self.b_answer_2, self.b_answer_3, self.b_answer_4];
+        for (UIButton* aButt in tempArray) {
+            aButt.userInteractionEnabled = NO;
+            if (aButt.tag == 1) {
+                 aButt.backgroundColor = [UIColor greenColor];
+            }
+        }
+
+        
     }completion:^(BOOL finished) {
         // step 2, do someting
         // step 0, do someting
@@ -279,8 +294,10 @@
     AVPlayer* player = self.playerController.player;
     AVPlayerItem* videoItem = player.currentItem;
     [videoItem seekToTime:kCMTimeZero completionHandler:nil];
-    player.automaticallyWaitsToMinimizeStalling = NO;
-    [player playImmediatelyAtRate:1];
+    if ([player respondsToSelector:@selector(setAutomaticallyWaitsToMinimizeStalling:)]) {
+        player.automaticallyWaitsToMinimizeStalling = NO;
+        [player playImmediatelyAtRate:1];
+    }
     [player play];
 }
 
@@ -311,10 +328,13 @@
     }
     
     [self addPlayer:_playerController withFile:nextWord];
-    self.playerController.showsPlaybackControls = false;
     AVPlayer* player = self.playerController.player;
-    player.automaticallyWaitsToMinimizeStalling = NO;
-    [player playImmediatelyAtRate:1];
+    
+    if ([player respondsToSelector:@selector(setAutomaticallyWaitsToMinimizeStalling:)]) {
+        player.automaticallyWaitsToMinimizeStalling = NO;
+        [player playImmediatelyAtRate:1];
+    }
+    self.playerController.showsPlaybackControls = false;
     [player play];
     
 }
