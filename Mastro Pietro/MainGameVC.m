@@ -43,7 +43,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *shareButton;
 
 @property (strong, nonatomic) IBOutlet UILabel *scoreLabel;
-@property (strong, nonatomic) IBOutlet UILabel *labelButton_addWeb;
+@property (strong, nonatomic) IBOutlet UILabel *labelButton_offLine;
+@property (strong, nonatomic) IBOutlet UILabel *labelButton_onLine;
+@property (strong, nonatomic) IBOutlet UILabel *labelButton_credits;
 @property (strong, nonatomic) IBOutlet UILabel *message;
 @property (strong, nonatomic) IBOutlet UILabel *initialMessageLabel;
 
@@ -51,6 +53,8 @@
 @property (strong, nonatomic) IBOutlet UIView *boxContinueButtons;
 @property (strong, nonatomic) IBOutlet UIView *boxMessage;
 @property (strong, nonatomic) IBOutlet UIView *boxView_addWeb;
+@property (strong, nonatomic) IBOutlet UIView *boxView_Share;
+@property (nonatomic) BOOL useVideoOnline;
 
 @property (nonatomic, strong) MoviesAndWords_Main * myMoviesAndWords_local;
 @property (nonatomic, strong) MoviesAndWords_Main * myMoviesAndWords_web_stored;
@@ -73,14 +77,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.shareButton.hidden = YES;
-    self.boxView_addWeb.tag = 0;
-    self.labelButton_addWeb.text = webNotIncluded;
-    UITapGestureRecognizer * myTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSwitchOnLine:)];
-    [self.boxView_addWeb addGestureRecognizer:myTap];
-    self.boxView_addWeb.userInteractionEnabled = NO;
-    self.boxView_addWeb.alpha = 0.5;
+    self.useVideoOnline = NO;
+    
+    self.boxView_Share.hidden = YES;
 
+    UITapGestureRecognizer * myTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSwitchOnLine:)];
+    [self.labelButton_offLine addGestureRecognizer:myTap1];
+    self.labelButton_offLine.userInteractionEnabled = YES;
+    self.labelButton_offLine.tag = 0;
+
+    UITapGestureRecognizer * myTap2 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSwitchOnLine:)];
+    [self.labelButton_onLine addGestureRecognizer:myTap2];
+    self.labelButton_onLine.userInteractionEnabled = NO;
+    self.labelButton_onLine.tag = 1;
+    self.labelButton_onLine.alpha = 0.4;
+
+    UITapGestureRecognizer * myTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cretitAlert)];
+    [self.labelButton_credits addGestureRecognizer:myTap3];
+    self.labelButton_credits.userInteractionEnabled = YES;
+  
     self.greenColor = self.boxMessage.backgroundColor;
     self.quizView.alpha = 0;
     [self loadJsonData];
@@ -94,11 +109,6 @@
     }
     [self tryToDownloadWebList];
     
-//    _boxView_addWeb.backgroundColor = _greenColor;
-//    _boxView_addWeb.layer.cornerRadius = cornerRad;
-//    _boxView_addWeb.layer.borderWidth = 1;
-//    _boxView_addWeb.clipsToBounds = YES;
-
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -115,20 +125,22 @@
 }
 
 -(void)tapSwitchOnLine:(UITapGestureRecognizer*)aTapGesture{
-    if (self.boxView_addWeb.tag == 0) {
-        self.boxView_addWeb.tag = 1;
-        self.labelButton_addWeb.text = webIncluded;
+    UIView * sender = aTapGesture.view;
+    if (sender.tag == 0) {
+        self.useVideoOnline = NO;
+        //        self.labelButton_offLine.text = webIncluded;
     } else {
-        self.boxView_addWeb.tag = 0;
-        self.labelButton_addWeb.text = webNotIncluded;
+        self.useVideoOnline = YES;
+        //        self.labelButton_offLine.text = webNotIncluded;
     }
+    [self startToPlay:sender];
 }
 
 -(IBAction)startToPlay:(id)sender {
     //  if (!_toBePlayedMovies) {
     self.myMoviesAndWords_web = nil;
     self.toBePlayedMovies = [self.myMoviesAndWords_local.listaMovie.movieObj mutableCopy];
-    if (_boxView_addWeb.tag == 1 ) {
+    if (_useVideoOnline ) {
         self.myMoviesAndWords_web = _myMoviesAndWords_web_stored;
         if (_myMoviesAndWords_web.listaMovie.movieObj.count) {
             [self.toBePlayedMovies addObjectsFromArray:_myMoviesAndWords_web.listaMovie.movieObj];
@@ -454,12 +466,12 @@
     
     if (_answers_total > 0) {
         CGFloat percent = (100.0 * _answers_correct) / _answers_total;
-        if (percent >= 50) {
-            self.initialMessageLabel.text = [NSString stringWithFormat:@"Complimenti, hai risposto al %.0f\%% delle domande!\nCondividi questo risultato.        \n", percent];
-        } else {
-            self.initialMessageLabel.text = [NSString stringWithFormat:@"Hai risposto al %.0f\%% delle domande!\nCondividi questo risultato.        \n", percent];
-        }
-        self.shareButton.hidden = NO;
+        // if (percent >= 50) {
+        self.initialMessageLabel.text = [NSString stringWithFormat:@"%.0f\%% di risposte corrette.\nCondividi il tuo risultato\n", percent];
+        //        } else {
+        //            self.initialMessageLabel.text = [NSString stringWithFormat:@"Hai risposto al %.0f\%% delle domande!\nCondividi questo risultato.        \n", percent];
+        //     }
+        self.boxView_Share.hidden = NO;
         self.initialMessageLabel.hidden = NO;
     }
     self.quizView.alpha = 0;
@@ -614,7 +626,7 @@
     }
 }
 
--(IBAction)cretitAlert:(id)sender {
+-(void)cretitAlert {
     NSString * message = @"Additional sound effects from \nhttps://www.zapsplat.com";
     UIAlertController* aPopUp = [UIAlertController alertControllerWithTitle:@"Credits" message:message preferredStyle:UIAlertControllerStyleAlert];
 
@@ -718,10 +730,12 @@
                 if (bean) {
                     LOG(@"%@",bean);
                     self.myMoviesAndWords_web_stored = bean;
-                    self.boxView_addWeb.userInteractionEnabled = YES;
-                    self.boxView_addWeb.alpha = 1;
+                    self.labelButton_onLine.userInteractionEnabled = YES;
+                    self.labelButton_onLine.alpha = 1;
                     // self.toBePlayedMovies = [self.myMoviesAndWords_local.listaMovie mutableCopy];
                 } else {
+                    self.labelButton_onLine.userInteractionEnabled = NO;
+                    self.labelButton_onLine.alpha = 0.4;
                     NSString *error = @"Bean Sbagliato, non parsato correttamente";
                     [self setErrorState:error withErrorCode:@"bho" forDataLoader:aDataLoader];
                 }
