@@ -1,0 +1,33 @@
+{
+  "images" : [
+    {
+      "filename" : "fondo-alto-verde~iphone@1x.png",
+      "scale" : "1x",
+      "idiom" : "iphone"
+    },
+    {
+      "filename" : "fondo-alto-verde~iphone@2x.png",
+      "idiom" : "iphone",
+      "scale" : "2x"
+    },
+    {
+      "scale" : "3x",
+      "idiom" : "iphone",
+      "filename" : "fondo-alto-verde~iphone@3x.png"
+    },
+    {
+      "scale" : "1x",
+      "idiom" : "ipad",
+      "filename" : "fondo-alto-verde~ipad@1x.png"
+    },
+    {
+      "scale" : "2x",
+      "idiom" : "ipad",
+      "filename" : "fondo-alto-verde~ipad@2x.png"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

@@ -7,8 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MoviesAndWords_Main.h"
 
-@interface MainGameVC : UIViewController <UINavigationControllerDelegate>
+typedef enum : NSUInteger {
+    MovieSourceType_embedded = 0,
+    MovieSourceType_web = 1,
+} MovieSourceType;
+
+
+
+@interface MoviesAndWords_MovieObj (utilities)
+
+-(MovieSourceType)getType;
+
+@end
+
+
+
+@interface MainGameVC : UIViewController <UINavigationControllerDelegate, DataLoaderProtocol>
 
 
 @end

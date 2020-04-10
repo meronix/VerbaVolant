@@ -1,0 +1,24 @@
+{
+    "wrongWords": [
+        "canguro",
+        "dromedario",
+        "campeggio"
+    ],
+    
+    "listaMovie":
+    {"movie_obj": [{"name":"pancia","type":"web"},{"name":"verde","type":"web"},{"name":"sali","type":"web"},{"name":"calze","type":"web"},{"name":"pecora","type":"web"},{"name":"scivolo","type":"web"},{"name":"piede","type":"web"},{"name":"carota","type":"web"},{"name":"salsiccia","type":"web"},{"name":"mano","type":"web"},{"name":"patata","type":"web"},{"name":"prato","type":"web"},{"name":"salvietta","type":"web"},{"name":"testa","type":"web"},{"name":"gatto","type":"web"},{"name":"erba","type":"web"},{"name":"pistola","type":"web"},{"name":"maiale","type":"web"},{"name":"fiori","type":"web"},{"name":"rosso","type":"web"},{"name":"maglietta","type":"web"},{"name":"brutto","type":"web"},{"name":"delfino","type":"web"}]
+    },
+    
+    "listaRisposteOK":
+    {"movie_obj":
+        [  ]
+    },
+    
+    "listaRisposteKO":
+    {"movie_obj":
+        [  ]
+    }
+}
+
+
+
