@@ -1,0 +1,11 @@
+/*
+ Localizable.strings
+  
+ */
+
+"checkLocale" = "en_EN";
+
+// first VC
+"welcomeMessage" = "The best way to learn italian:\n  videolessons by  \n    the best native teachers.\n Are you confident in understanding the language of Dante and Manzoni?\nTry our test test and discover how many words you can recognize.";
+"cominciaButton" = "Start!";
+

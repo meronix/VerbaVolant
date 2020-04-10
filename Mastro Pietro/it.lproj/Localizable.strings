@@ -1,0 +1,11 @@
+/*
+ Localizable.strings
+ 
+ */
+
+"checkLocale" = "it_IT";
+
+// first VC
+"welcomeMessage" = "Il miglior modo di imparare l'italiano:\n  videolezioni impartite\n    dai migliori maestri figlio-lingua.\n\nPensi di conoscere bene la lingua di Dante e Manzoni?\nEsegui il nostro test e scopri quante parole riesci a riconoscere a orecchio.";
+"cominciaButton" = "Comincia!";
+

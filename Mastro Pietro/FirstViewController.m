@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSString* welcomeMessage = NSLocalizedString(@"welcomeMessage", nil);
+    
+  //  _welcomeMessage.text = welcomeMessage;
+    [_startButton setTitle:NSLocalizedString(@"cominciaButton", nil) forState:UIControlStateNormal];
 }
 
 

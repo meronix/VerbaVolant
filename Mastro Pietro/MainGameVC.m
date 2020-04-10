@@ -48,6 +48,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelButton_credits;
 @property (strong, nonatomic) IBOutlet UILabel *message;
 @property (strong, nonatomic) IBOutlet UILabel *initialMessageLabel;
+@property (strong, nonatomic) IBOutlet UILabel *labelQuestionWeb;
 
 @property (strong, nonatomic) IBOutlet UIView *boxQuestionButtons;
 @property (strong, nonatomic) IBOutlet UIView *boxContinueButtons;
@@ -677,19 +678,20 @@
     [avc setValue:@"Mastro Pietro: test eseguito da con successo" forKey:@"subject"];
     
     avc.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
-        NSLog(@"Activity Type selected: %@", activityType);
+        LOG(@"Activity Type selected: %@", activityType);
         if (completed) {
-            NSLog(@"Selected activity was performed.");
+            LOG(@"Selected activity was performed.");
         } else {
             if (activityType == NULL) {
-                NSLog(@"User dismissed the view controller without making a selection.");
+                LOG(@"User dismissed the view controller without making a selection.");
             } else {
-                NSLog(@"Activity was not performed.");
+                LOG(@"Activity was not performed.");
             }
         }
     };
     avc.popoverPresentationController.sourceView = self.view;
     [self presentViewController:avc animated:YES completion:nil];
+    //    [self showDetailViewController:avc sender:nil];
 }
 
 #pragma mark - dataLoader

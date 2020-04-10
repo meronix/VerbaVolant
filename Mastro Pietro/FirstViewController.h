@@ -10,6 +10,10 @@
 
 @interface FirstViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UILabel * welcomeMessage;
+@property (nonatomic, strong) IBOutlet UIButton * startButton;
+
+
 
 @end
 
