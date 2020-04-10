@@ -80,7 +80,7 @@
     [super viewDidLoad];
     self.useVideoOnline = NO;
     
-    self.boxView_Share.hidden = YES;
+  //  self.boxView_Share.hidden = YES;
 
     UITapGestureRecognizer * myTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSwitchOnLine:)];
     [self.labelButton_offLine addGestureRecognizer:myTap1];
@@ -689,7 +689,7 @@
             }
         }
     };
-    avc.popoverPresentationController.sourceView = self.view;
+    avc.popoverPresentationController.sourceView = self.shareButton;
     [self presentViewController:avc animated:YES completion:nil];
     //    [self showDetailViewController:avc sender:nil];
 }
