@@ -79,9 +79,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.useVideoOnline = NO;
+    self.boxView_Share.hidden = YES;
     
-  //  self.boxView_Share.hidden = YES;
-
+    [_continuaButton setTitle:NSLocalizedString(@"continua", nil) forState:UIControlStateNormal];
+    [_esciButton setTitle:NSLocalizedString(@"esci", nil) forState:UIControlStateNormal];
+    
+    _labelQuestionWeb.text = NSLocalizedString(@"goOnlineMessage", nil);
+    _labelButton_onLine.text = NSLocalizedString(@"onLineToo", nil);;
+    _labelButton_offLine.text = NSLocalizedString(@"offLineOnly", nil);
+    
     UITapGestureRecognizer * myTap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapSwitchOnLine:)];
     [self.labelButton_offLine addGestureRecognizer:myTap1];
     self.labelButton_offLine.userInteractionEnabled = YES;
@@ -378,8 +384,9 @@
 //
 //}
 -(void)updateScoreLabel{
-    self.message.text = @"Che cosa ho detto?";
-    self.scoreLabel.text = [NSString stringWithFormat:@"risposte esatte: %i / %i", _answers_correct, _answers_total];
+    self.message.text = NSLocalizedString(@"guessWhat", nil);
+    self.scoreLabel.text = [NSString stringWithFormat:NSLocalizedString(@"correctAnswer", nil), _answers_correct, _answers_total];
+    //    self.scoreLabel.text = [NSString stringWithFormat:@"risposte esatte: %i / %i", _answers_correct, _answers_total];
 }
 
 - (IBAction)answerButton:(UIButton *)sender {
@@ -468,7 +475,7 @@
     if (_answers_total > 0) {
         CGFloat percent = (100.0 * _answers_correct) / _answers_total;
         // if (percent >= 50) {
-        self.initialMessageLabel.text = [NSString stringWithFormat:@"%.0f\%% di risposte corrette.\nCondividi il tuo risultato\n", percent];
+        self.initialMessageLabel.text = [NSString stringWithFormat:NSLocalizedString(@"sharedMessage", nil), percent];
         //        } else {
         //            self.initialMessageLabel.text = [NSString stringWithFormat:@"Hai risposto al %.0f\%% delle domande!\nCondividi questo risultato.        \n", percent];
         //     }
@@ -628,27 +635,17 @@
 }
 
 -(void)cretitAlert {
-    NSString * message = @"Additional sound effects from \nhttps://www.zapsplat.com";
+    
+    
+    NSString * message = NSLocalizedString(@"creditMessage", nil);
     UIAlertController* aPopUp = [UIAlertController alertControllerWithTitle:@"Credits" message:message preferredStyle:UIAlertControllerStyleAlert];
 
-    UIAlertAction* anAction = [UIAlertAction actionWithTitle:@"chiudi" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+    UIAlertAction* anAction = [UIAlertAction actionWithTitle:NSLocalizedString(@"chiudi", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
         [aPopUp dismissViewControllerAnimated:YES completion:nil];
     }];
     [aPopUp addAction:anAction];
     
     [self presentViewController:aPopUp animated:YES completion:nil];
-    
-//    let save = UIAlertAction(title: "SalvaButton".localized, style: .default) {
-//        (alertAction) in
-//            CoreDataManager.getSharedInstance().checkAndSaveConfiguration(withName: withName, askAndStopIfExists: false)
-//     }
-//
-//    //Cancel action
-//    let cancel = UIAlertAction(title: "AnnullaButton".localized, style: .cancel) { (alertAction) in }
-//    alert.addAction(cancel)
-//    alert.addAction(save)
-//    self.present(alert, animated:true, completion: nil)
-
 }
 
 -(IBAction)shareAction:(id)sender {
@@ -660,8 +657,18 @@
     }
     
     // add string
+//    _answers_total = 100;
+//    _answers_correct = 74;
+    
     CGFloat percent = (100.0 * _answers_correct) / _answers_total;
-    NSString * sharedMessage  = [NSString stringWithFormat:@"Ho appenna giocato con l'app 'Mastro Pietro' e ho risposto al %.0f \%% delle domande!\n\n https://www.apple.com \n", percent];
+    NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+    
+    
+    NSString * sharedMessage  = [NSString stringWithFormat:NSLocalizedString(@"shareMessage", nil), appName, percent];
+    
+    //    NSString * sharedMessage  = [NSString stringWithFormat:@"I've just played with \"%@\" and my score is %.0f \%% !\n\n https://www.apple.com \n", appName, percent];
+    
+    
     [selDocs addObject:sharedMessage];
     // [selDocs addObject:@"\n COMPLIMENTI! \n"];
     

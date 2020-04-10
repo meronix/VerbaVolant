@@ -9,3 +9,21 @@
 "welcomeMessage" = "The best way to learn italian:\n  videolessons by  \n    the best native teachers.\n Are you confident in understanding the language of Dante and Manzoni?\nTry our test test and discover how many words you can recognize.";
 "cominciaButton" = "Start!";
 
+//main gage vc
+"sharedMessage" = "%.0f\%% correct answers.\nShare your score\n";
+"goOnlineMessage" = "Would you like to see on-line video too (wi-fi recommended)?";
+
+// credits
+"creditMessage" = "Thanks to Pietro & Matteo\n Additional sound effects from \n https://www.zapsplat.com \n and \n http://soundbible.com";
+
+// share message
+"shareMessage" = "I've just played with \"%@\" and my score is %.0f \%% !\n\n https://www.apple.com \n";
+
+"chiudi" = "ok";
+
+"guessWhat" = "Guess what i said?";
+
+"correctAnswer" = "correct answers: %i / %i";
+
+"continua" = "next";
+"esci" = "stop";

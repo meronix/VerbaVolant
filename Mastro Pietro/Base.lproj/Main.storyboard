@@ -305,6 +305,7 @@ Condividi il tuo risultato</string>
                         <outlet property="labelButton_credits" destination="esY-J0-8TC" id="jy1-kM-g9J"/>
                         <outlet property="labelButton_offLine" destination="AbC-oH-kqf" id="RCT-Lt-u4G"/>
                         <outlet property="labelButton_onLine" destination="fgB-2S-FFU" id="ogT-pK-N00"/>
+                        <outlet property="labelQuestionWeb" destination="PgN-rG-kIw" id="duG-rG-Nei"/>
                         <outlet property="message" destination="eX6-vU-HlF" id="0aU-8S-GpU"/>
                         <outlet property="quizView" destination="tjO-FO-R6n" id="95A-b4-Unn"/>
                         <outlet property="scoreLabel" destination="g2k-W7-TB8" id="wuC-gQ-czB"/>

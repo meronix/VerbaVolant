@@ -9,3 +9,24 @@
 "welcomeMessage" = "Il miglior modo di imparare l'italiano:\n  videolezioni impartite\n    dai migliori maestri figlio-lingua.\n\nPensi di conoscere bene la lingua di Dante e Manzoni?\nEsegui il nostro test e scopri quante parole riesci a riconoscere a orecchio.";
 "cominciaButton" = "Comincia!";
 
+//main gage vc
+"sharedMessage" = "%.0f\%% di risposte corrette.\nCondividi il tuo risultato\n";
+"goOnlineMessage" = "Vuoi guardare anche i contenuti on-line (wi-fi consigliato)?";
+"offLineOnly" = "off-line only";
+"onLineToo" = "load all";
+
+// credits
+"creditMessage" = "Grazie a Pietro e Matteo\n effetti audio aggiunti da \n https://www.zapsplat.com \n e \n http://soundbible.com";
+
+// share message
+"shareMessage" = "Ho apena giocato con l'app \"%@\" e ho risposto al %.0f \%% delle domande!\n\n https://www.apple.com \n";
+
+"chiudi" = "chiudi";
+
+"guessWhat" = "Che cosa ho detto?";
+
+"correctAnswer" = "risposte esatte: %i / %i";
+
+"continua" = "continua";
+"esci" = "esci";
+
