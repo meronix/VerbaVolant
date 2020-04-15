@@ -519,7 +519,17 @@
         }
         nextMovieObj = [self getNextMovieObjInList:tempListaRisposte andRemove:NO];
         
-        self.message.text = [NSString stringWithFormat:@"%@", nextMovieObj.name];
+        NSString* testLocale = NSLocalizedString(@"checkLocale", nil);
+        if ([testLocale isEqualToString:@"it_IT"]) {
+            self.message.text = [NSString stringWithFormat:@"%@", nextMovieObj.name];
+        } else {
+            if (correctAnswer) {
+                self.message.text = @"correct !";
+            } else {
+                self.message.text = @"no way !";
+            }
+        }
+        
         self.currentWord = nil;
     } else {
         if (_toBePlayedMovies.count == 0) {
@@ -542,13 +552,16 @@
     }
     self.playerController.showsPlaybackControls = false;
     
-//    [self.playerController.player addObserver:self
-//    forKeyPath:@"status"
-//       options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
-//       context:nil];
 
+  //  [self performSelector:@selector(delayedshowQuestion:) withObject:_currentWord afterDelay:2];
     [player play];
     
+}
+
+-(void)delayedshowQuestion:(NSString*)theWordToShow{
+    if ([theWordToShow isEqualToString:_currentWord]) {
+        
+    }
 }
 
 -(void)loadQuestionButtons {
@@ -651,7 +664,7 @@
 -(IBAction)shareAction:(id)sender {
     NSMutableArray *selDocs = [[NSMutableArray alloc] init];
     // add image
-    UIImage * tempImage = [UIImage imageNamed:@"reload.png"];
+    UIImage * tempImage = [UIImage imageNamed:@"AppIcon"];
     if (tempImage) {
         [selDocs addObject:tempImage];
     }
@@ -673,7 +686,7 @@
     // [selDocs addObject:@"\n COMPLIMENTI! \n"];
     
     // add link
-    NSURL *fileUrl = [NSURL URLWithString:@"http://www.apple.com"];
+    NSURL *fileUrl = [NSURL URLWithString:@"https://apps.apple.com/app/id1507791488"];
     if (fileUrl) {
         // [selDocs addObject:fileUrl];
     }
@@ -682,7 +695,7 @@
     UIActivityViewController *avc = [[UIActivityViewController alloc] initWithActivityItems:postItems applicationActivities:nil];
     
     // add subject in case of email
-    [avc setValue:@"Mastro Pietro: test eseguito da con successo" forKey:@"subject"];
+    [avc setValue:NSLocalizedString(@"eMailSubject", nil) forKey:@"subject"];
     
     avc.completionWithItemsHandler = ^(UIActivityType  _Nullable activityType, BOOL completed, NSArray * _Nullable returnedItems, NSError * _Nullable activityError) {
         LOG(@"Activity Type selected: %@", activityType);

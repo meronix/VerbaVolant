@@ -7,19 +7,19 @@
 
 // first VC
 "welcomeMessage" = "Il miglior modo di imparare l'italiano:\n  videolezioni impartite\n    dai migliori maestri figlio-lingua.\n\nPensi di conoscere bene la lingua di Dante e Manzoni?\nEsegui il nostro test e scopri quante parole riesci a riconoscere a orecchio.";
-"cominciaButton" = "Comincia!";
+"cominciaButton" = "Cominciamo!";
 
 //main gage vc
 "sharedMessage" = "%.0f\%% di risposte corrette.\nCondividi il tuo risultato\n";
-"goOnlineMessage" = "Vuoi guardare anche i contenuti on-line (wi-fi consigliato)?";
-"offLineOnly" = "off-line only";
-"onLineToo" = "load all";
+"goOnlineMessage" = "Vuoi guardare anche i contenuti on-line? \n(wi-fi consigliato)";
+"offLineOnly" = "no, grazie";
+"onLineToo" = "mostrami tutto";
 
 // credits
 "creditMessage" = "Grazie a Pietro e Matteo\n effetti audio aggiunti da \n https://www.zapsplat.com \n e \n http://soundbible.com";
 
 // share message
-"shareMessage" = "Ho apena giocato con l'app \"%@\" e ho risposto al %.0f \%% delle domande!\n\n https://www.apple.com \n";
+"shareMessage" = "Ho apena giocato con l'app \"%@\" e ho risposto correttamente al %.0f \%% delle domande!\n\n https://apps.apple.com/app/id1507791488 \n";
 
 "chiudi" = "chiudi";
 
@@ -29,4 +29,6 @@
 
 "continua" = "continua";
 "esci" = "esci";
+
+"eMailSubject" = "Verba Volant";
 

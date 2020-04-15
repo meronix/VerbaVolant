@@ -6,18 +6,20 @@
 "checkLocale" = "en_EN";
 
 // first VC
-"welcomeMessage" = "The best way to learn italian:\n  videolessons by  \n    the best native teachers.\n Are you confident in understanding the language of Dante and Manzoni?\nTry our test test and discover how many words you can recognize.";
-"cominciaButton" = "Start!";
+"welcomeMessage" = "The smartest way to learn the italian language:\n  videolessons by  \n    the best native teachers.\n Are you confident in understanding the language of Dante and Manzoni?\nTry our test and discover how many words you can recognize.";
+"cominciaButton" = "Let's Start!";
 
 //main gage vc
 "sharedMessage" = "%.0f\%% correct answers.\nShare your score\n";
-"goOnlineMessage" = "Would you like to see on-line video too (wi-fi recommended)?";
+"goOnlineMessage" = "Would you like to see on-line video too? \n(wi-fi recommended)";
+"offLineOnly" = "off-line only";
+"onLineToo" = "load all";
 
 // credits
 "creditMessage" = "Thanks to Pietro & Matteo\n Additional sound effects from \n https://www.zapsplat.com \n and \n http://soundbible.com";
 
 // share message
-"shareMessage" = "I've just played with \"%@\" and my score is %.0f \%% !\n\n https://www.apple.com \n";
+"shareMessage" = "I've just played with \"%@\" and my score is %.0f \%% !\n\n https://apps.apple.com/app/id1507791488 \n";
 
 "chiudi" = "ok";
 
@@ -27,3 +29,5 @@
 
 "continua" = "next";
 "esci" = "stop";
+
+"eMailSubject" = "Verba Volant";
