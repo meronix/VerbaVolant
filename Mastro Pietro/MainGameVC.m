@@ -99,7 +99,7 @@
     self.labelButton_onLine.tag = 1;
     self.labelButton_onLine.alpha = 0.4;
 
-    UITapGestureRecognizer * myTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cretitAlert)];
+    UITapGestureRecognizer * myTap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(creditAlert)];
     [self.labelButton_credits addGestureRecognizer:myTap3];
     self.labelButton_credits.userInteractionEnabled = YES;
   
@@ -151,7 +151,7 @@
         self.myMoviesAndWords_web = _myMoviesAndWords_web_stored;
         if (_myMoviesAndWords_web.listaMovie.movieObj.count) {
             [self.toBePlayedMovies addObjectsFromArray:_myMoviesAndWords_web.listaMovie.movieObj];
-            LOG(@"ADDED web list: self.toBePlayedMovies: count:%i,\n %@", self.toBePlayedMovies.count, self.toBePlayedMovies);
+            LOG(@"ADDED web list: self.toBePlayedMovies: count:%lu,\n %@", (unsigned long)self.toBePlayedMovies.count, self.toBePlayedMovies);
         }
     }
     //  }
@@ -189,6 +189,10 @@
         //        forKeyPath:@"error"
         //           options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
         //           context:nil];
+        UITapGestureRecognizer * myTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showButtons)];
+        [self.playerController.view addGestureRecognizer:myTap];
+        self.playerController.view.userInteractionEnabled = YES;
+
         
     }
     
@@ -353,12 +357,18 @@
             if (self.toBePlayedMovies.count == 0) {
                 self.continuaButton.hidden = YES;
             }
-
+            
         }];
     }
     
     _quizView.hidden = false;
     self.quizView.alpha = 1;
+}
+
+-(void)showButtons{
+    _quizView.hidden = false;
+    self.quizView.alpha = 1;
+    [self addEmergencyExitButton:nil];
 }
 
 -(void) addEmergencyExitButton:(NSNotification*)notification {
@@ -668,7 +678,7 @@
     }
 }
 
--(void)cretitAlert {
+-(void)creditAlert {
     
     
     NSString * message = NSLocalizedString(@"creditMessage", nil);

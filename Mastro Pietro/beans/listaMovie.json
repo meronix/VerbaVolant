@@ -124,7 +124,7 @@
     ],
     
     
-    "listaMovie_OK":
+    "listaMovie":
     {
       "movie_obj": [
         {
@@ -291,7 +291,7 @@
         }
       ]
     },
-    "listaMovie":
+    "listaMovie_test":
     {"movie_obj": [
         { "name": "pizza",
           "type": "web"},
