@@ -2,11 +2,251 @@
     "wrongWords": [
         "canguro",
         "dromedario",
-        "campeggio"
+        "campeggio", "idromele"
     ],
     
     "listaMovie":
-    {"movie_obj": [{"name":"pancia","type":"web"},{"name":"verde","type":"web"},{"name":"sali","type":"web"},{"name":"calze","type":"web"},{"name":"pecora","type":"web"},{"name":"scivolo","type":"web"},{"name":"piede","type":"web"},{"name":"carota","type":"web"},{"name":"salsiccia","type":"web"},{"name":"mano","type":"web"},{"name":"patata","type":"web"},{"name":"prato","type":"web"},{"name":"salvietta","type":"web"},{"name":"testa","type":"web"},{"name":"gatto","type":"web"},{"name":"erba","type":"web"},{"name":"pistola","type":"web"},{"name":"maiale","type":"web"},{"name":"fiori","type":"web"},{"name":"rosso","type":"web"},{"name":"maglietta","type":"web"},{"name":"brutto","type":"web"},{"name":"delfino","type":"web"}]
+    {
+      "movie_obj": [
+        {
+          "name": "pancia",
+          "type": "web"
+        },
+        {
+          "name": "verde",
+          "type": "web"
+        },
+        {
+          "name": "sali",
+          "type": "web"
+        },
+        {
+          "name": "calze",
+          "type": "web"
+        },
+        {
+          "name": "pecora",
+          "type": "web"
+        },
+        {
+          "name": "scivolo",
+          "type": "web"
+        },
+        {
+          "name": "piede",
+          "type": "web"
+        },
+        {
+          "name": "carota",
+          "type": "web"
+        },
+        {
+          "name": "salsiccia",
+          "type": "web"
+        },
+        {
+          "name": "mano",
+          "type": "web"
+        },
+        {
+          "name": "patata",
+          "type": "web"
+        },
+        {
+          "name": "prato",
+          "type": "web"
+        },
+        {
+          "name": "salvietta",
+          "type": "web"
+        },
+        {
+          "name": "testa",
+          "type": "web"
+        },
+        {
+          "name": "gatto",
+          "type": "web"
+        },
+        {
+          "name": "erba",
+          "type": "web"
+        },
+        {
+          "name": "pistola",
+          "type": "web"
+        },
+        {
+          "name": "maiale",
+          "type": "web"
+        },
+        {
+          "name": "fiori",
+          "type": "web"
+        },
+        {
+          "name": "rosso",
+          "type": "web"
+        },
+        {
+          "name": "maglietta",
+          "type": "web"
+        },
+        {
+          "name": "brutto",
+          "type": "web"
+        },
+        {
+          "name": "delfino",
+          "type": "web"
+        },
+        {
+          "name": "zucchina",
+          "type": "web"
+        },
+        {
+          "name": "oh_lo_ho_mangiato_io",
+          "type": "web",
+          "targetedWords": [ "oh, l'ho mangiato io", "mi sono confuso", "pende a destra" ]
+        },
+        {
+          "name": "pizza",
+          "type": "web"
+        },
+        {
+          "name": "palla",
+          "type": "web"
+        },
+        {
+          "name": "due",
+          "type": "web"
+        },
+        {
+          "name": "si_e_io_tengo_il_cavallo",
+          "type": "web",
+          "targetedWords": [ "si, e io tengo il cavallo", "meglio a te che a me", "l'asimmetria bilatera" ]
+        },
+        {
+          "name": "sbadiglio",
+          "type": "web"
+        },
+        {
+          "name": "blu",
+          "type": "web"
+        },
+        {
+          "name": "pantaloni",
+          "type": "web"
+        },
+        {
+          "name": "buon_appetito",
+          "type": "web"
+        },
+        {
+          "name": "salta",
+          "type": "web"
+        },
+        {
+          "name": "si",
+          "type": "web"
+        },
+        {
+          "name": "mucca",
+          "type": "web"
+        },
+        {
+          "name": "tutto",
+          "type": "web"
+        },
+        {
+          "name": "buona_fortuna_capitano",
+          "type": "web",
+          "targetedWords": [ "buona fortuna, capitano", "il clavicembalo ben temperato", "la primavera di Vivaldi" ]
+        },
+        {
+          "name": "campana",
+          "type": "web"
+        },
+        {
+          "name": "paglia",
+          "type": "web"
+        },
+        {
+          "name": "salsiccia",
+          "type": "web"
+        },
+        {
+          "name": "occhio",
+          "type": "web"
+        },
+        {
+          "name": "arancio",
+          "type": "web"
+        },
+        {
+          "name": "tosse",
+          "type": "web"
+        },
+        {
+          "name": "cavallo",
+          "type": "web"
+        },
+        {
+          "name": "oh_no_ce_un_dente_di_leone",
+          "type": "web",
+          "targetedWords": [ "oh no, c'è un dente di leone", "il leone s'è addormentato", "la collina dei conigli" ]
+        },
+        {
+          "name": "dov_gnu",
+          "type": "web"
+        },
+        {
+          "name": "bimbo",
+          "type": "web"
+        },
+        {
+          "name": "pulcino",
+          "type": "web"
+        },
+        {
+          "name": "apri",
+          "type": "web"
+        },
+        {
+          "name": "macchina",
+          "type": "web"
+        },
+        {
+          "name": "giallo",
+          "type": "web"
+        },
+        {
+          "name": "scale",
+          "type": "web"
+        },
+        {
+          "name": "no_questo_disegno_non_mi_piace",
+          "type": "web",
+          "targetedWords": [ "no, questo disegno non mi piace", "ho preso una multa", "questa volta offri tu" ]
+        },
+        {
+          "name": "bocca",
+          "type": "web"
+        },
+        {
+          "name": "ombelico",
+          "type": "web"
+        },
+        {
+          "name": "ma_io_devo_andare_in_macchina",
+          "type": "web",
+          "targetedWords": [ "ma io devo andare in macchina", "mi gira la testa", "domani non si va a scuola" ]
+        },
+        {
+          "name": "capretta",
+          "type": "web"
+        }
+      ]
     },
     
     "listaRisposteOK":

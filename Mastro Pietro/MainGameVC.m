@@ -65,7 +65,7 @@
 @property (nonatomic) int answers_correct;
 @property (nonatomic) int answers_total;
 
-@property (nonatomic, strong) NSString * currentWord;
+@property (nonatomic, strong) MoviesAndWords_MovieObj * currentMovie;
 @property (nonatomic, strong) UIColor * greenColor;
 
 @end
@@ -231,6 +231,11 @@
                         change:(NSDictionary *)change
                        context:(void *)context {
     if (object == self.playerController.player ) {
+        
+        LOG(@"change status keyPath: %@", keyPath);
+        LOG(@"change status change: %@", change);
+
+        
         if ([keyPath isEqualToString:@"status"]) {
             if (self.playerController.player.status == AVPlayerStatusReadyToPlay) {
                 LOG(@"PLAYER NOTIFICATION: PLAYING");
@@ -338,7 +343,7 @@
     LOG(@"Text: %@", notification);
     LOG(@"Text: %@", notification.class);
     
-    if (_currentWord) {
+    if (_currentMovie) {
         // step 0, do someting
         [UIView animateWithDuration:0.3f delay:0.f options: UIViewAnimationOptionCurveEaseInOut|UIViewAnimationOptionBeginFromCurrentState animations:^{
             // step 1, do someting
@@ -530,7 +535,7 @@
             }
         }
         
-        self.currentWord = nil;
+        self.currentMovie = nil;
     } else {
         if (_toBePlayedMovies.count == 0) {
             [self exitButton:nil];
@@ -539,7 +544,7 @@
         nextMovieObj = [self getNextMovieObjInList:_toBePlayedMovies andRemove:YES];
         self.quizView.alpha = 0;
         self.quizView.hidden = YES;
-        self.currentWord = nextMovieObj.name;
+        self.currentMovie = nextMovieObj;
         [self loadQuestionButtons];
     }
     
@@ -559,14 +564,17 @@
 }
 
 -(void)delayedshowQuestion:(NSString*)theWordToShow{
-    if ([theWordToShow isEqualToString:_currentWord]) {
+    if ([theWordToShow isEqualToString:_currentMovie.name]) {
         
     }
 }
 
 -(void)loadQuestionButtons {
-    //  if (_currentWord) {
+    //  use : .targetedWords
     NSArray* tempArray = @[_b_answer_1, _b_answer_2, _b_answer_3, _b_answer_4];
+    
+    NSMutableArray * tempWordstoBeUsed = [_currentMovie.targetedWords mutableCopy];
+    
     for (UIButton* aButt in tempArray) {
         aButt.tag = 0;
         aButt.backgroundColor = [UIColor colorWithRed:.2 green:.2 blue:.4 alpha:.7];
@@ -576,7 +584,13 @@
     int indexOk = arc4random() % tempArray.count;
     UIButton * tempButon = tempArray[indexOk];
     tempButon.tag = 1;
-    [tempButon setTitle:_currentWord forState:UIControlStateNormal];
+    
+    NSString * correctWord = _currentMovie.name;
+    if (tempWordstoBeUsed.count) {
+        correctWord = tempWordstoBeUsed[0];
+        [tempWordstoBeUsed removeObjectAtIndex:0];
+    }
+    [tempButon setTitle:correctWord forState:UIControlStateNormal];
     
     NSMutableArray * tempArrayWords = [self.myMoviesAndWords_local.wrongWords mutableCopy];
     if (_myMoviesAndWords_web && _myMoviesAndWords_web.wrongWords.count > 0) {
@@ -584,7 +598,14 @@
     }
     for (UIButton* aButt in tempArray) {
         if ( aButt.tag == 0 ) {
-            [aButt setTitle:[self getRandomNameInList:tempArrayWords andRemove:YES] forState:UIControlStateNormal];
+            NSString * aWrongWord = nil;
+            if (tempWordstoBeUsed.count) {
+                aWrongWord = tempWordstoBeUsed[0];
+                [tempWordstoBeUsed removeObjectAtIndex:0];
+            } else {
+                aWrongWord = [self getRandomNameInList:tempArrayWords andRemove:YES];
+            }
+            [aButt setTitle:aWrongWord forState:UIControlStateNormal];
         }
     }
     
@@ -675,7 +696,6 @@
     
     CGFloat percent = (100.0 * _answers_correct) / _answers_total;
     NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
-    
     
     NSString * sharedMessage  = [NSString stringWithFormat:NSLocalizedString(@"shareMessage", nil), appName, percent];
     

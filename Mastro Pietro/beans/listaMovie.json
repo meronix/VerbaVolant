@@ -124,20 +124,209 @@
     ],
     
     
-    "listaMovie":
-    {"movie_obj": [{"name":"zucchina","type":"embedded"},{"name":"asinello","type":"embedded"},{"name":"pizza","type":"embedded"},{"name":"blu","type":"embedded"},{"name":"pantaloni","type":"embedded"},{"name":"salta","type":"embedded"},{"name":"si","type":"embedded"},{"name":"mucca","type":"embedded"},{"name":"tutto","type":"embedded"},{"name":"cane","type":"embedded"},{"name":"paglia","type":"embedded"},{"name":"sbagliato","type":"embedded"},{"name":"arancio","type":"embedded"},{"name":"chichirichi","type":"embedded"},{"name":"basta","type":"embedded"},{"name":"gallo","type":"embedded"},{"name":"bimbo","type":"embedded"},{"name":"pulcino","type":"embedded"},{"name":"macchina","type":"embedded"},{"name":"giallo","type":"embedded"},{"name":"scale","type":"embedded"},{"name":"pappa","type":"embedded"},{"name":"coccole","type":"embedded"}]
+    "listaMovie_OK":
+    {
+      "movie_obj": [
+        {
+          "name": "asinello",
+          "type": "embedded",
+          "targetedWords": [ "asinello", "monello", "fringuello" ]
+        },
+        {
+          "name": "chiuso",
+          "type": "embedded"
+        },
+        {
+          "name": "pancia",
+          "type": "embedded"
+        },
+        {
+          "name": "zio",
+          "type": "embedded"
+        },
+        {
+          "name": "asilo",
+          "type": "embedded"
+        },
+        {
+          "name": "bello",
+          "type": "embedded"
+        },
+        {
+          "name": "eccolo",
+          "type": "embedded"
+        },
+        {
+          "name": "ciuccio",
+          "type": "embedded"
+        },
+        {
+          "name": "cane",
+          "type": "embedded"
+        },
+        {
+          "name": "piede",
+          "type": "embedded"
+        },
+        {
+          "name": "prendiamo_un_altro_gnu",
+          "type": "embedded",
+          "targetedWords": [ "prendiamo un altro gnu", "potrebbe essere peggio", "essere o non essere" ]
+        },
+        {
+          "name": "chiesa",
+          "type": "embedded"
+        },
+        {
+          "name": "ma_freddo",
+          "type": "embedded",
+          "targetedWords": [ "ma è freddo", "andiamo a sciare", "prendiamo la funivia" ]
+        },
+        {
+          "name": "di qua",
+          "type": "embedded"
+        },
+        {
+          "name": "sbagliato",
+          "type": "embedded"
+        },
+        {
+          "name": "patata",
+          "type": "embedded"
+        },
+        {
+          "name": "no_dove_il_mio_dente_di_leone",
+          "type": "embedded",
+          "targetedWords": [ "no, dov'è il mio dente di leone?", "potrebbe piovere", "ed è subito sera", "hai visto la mia cravatta?" ]
+        },
+        {
+          "name": "bimbi",
+          "type": "embedded"
+        },
+        {
+          "name": "chichirichi",
+          "type": "embedded"
+        },
+        {
+          "name": "scimmia",
+          "type": "embedded"
+        },
+        {
+          "name": "luci",
+          "type": "embedded"
+        },
+        {
+          "name": "basta",
+          "type": "embedded"
+        },
+        {
+          "name": "gallo",
+          "type": "embedded"
+        },
+        {
+          "name": "auguri",
+          "type": "embedded"
+        },
+        {
+          "name": "di là",
+          "type": "embedded"
+        },
+        {
+          "name": "ascensore",
+          "type": "embedded"
+        },
+        {
+          "name": "sciabole",
+          "type": "embedded"
+        },
+        {
+          "name": "gatto",
+          "type": "embedded"
+        },
+        {
+          "name": "zia",
+          "type": "embedded"
+        },
+        {
+          "name": "quello_un_cornetto_quello_li",
+          "type": "embedded",
+          "targetedWords": [ "quello è un cornetto, quello lì", "come va la borsa?", "siamo ancora in quarantena?" ]
+        },
+        {
+          "name": "leone",
+          "type": "embedded"
+        },
+        {
+          "name": "pappa",
+          "type": "embedded"
+        },
+        {
+          "name": "chiudi",
+          "type": "embedded"
+        },
+        {
+          "name": "coccole",
+          "type": "embedded"
+        },
+        {
+          "name": "ok ",
+          "type": "embedded"
+        },
+        {
+          "name": "brutto",
+          "type": "embedded"
+        },
+        {
+          "name": "no_da_solo",
+          "type": "embedded",
+          "targetedWords": [ "no no no, da solo", "il nonno suona un assolo", "non sono mica sordo" ]
+        },
+        {
+          "name": "chiusa",
+          "type": "embedded"
+        },
+        {
+          "name": "musica",
+          "type": "embedded"
+        }
+      ]
     },
+    "listaMovie":
+    {"movie_obj": [
+        { "name": "pizza",
+          "type": "web"},
+        { "name": "salsiccia",
+          "type": "web"},
+        {"name":"giallo",
+            "type":"web"},
+        
+        { "name": "basta",
+          "type": "embedded"},
+        { "name": "cane",
+          "type": "embedded"}
+
+    ] },
+    
     
     "listaRisposteOK":
     {"movie_obj":
-        [{"name":"questa era facile","type":"embedded"},{"name":"ottimo","type":"embedded"},{"name":"ok","type":"embedded"}]
+        [
+            {"name":"questa era facile", "type":"embedded"},
+            {"name":"ottimo","type":"embedded"},
+        {"name":"ok","type":"embedded"}]
     },
     
     
     
     "listaRisposteKO":
     {"movie_obj":
-        [{"name":"non ti applichi","type":"embedded"},{"name":"proprio no","type":"embedded"},{"name":"ritenta","type":"embedded"},{"name":"e no","type":"embedded"},{"name":"ma va","type":"embedded"},{"name":"non ci siamo","type":"embedded"},{"name":"ma no","type":"embedded"}]
+        [{"name":"non ti applichi","type":"embedded"},
+            {"name":"proprio no","type":"embedded"},
+            {"name":"ritenta","type":"embedded"},
+            {"name":"e no","type":"embedded"},
+            {"name":"ma va","type":"embedded"},
+            {"name":"non ci siamo","type":"embedded"},
+        {"name":"ma no","type":"embedded"}]
     }
 }
 

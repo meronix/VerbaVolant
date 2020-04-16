@@ -1,7 +1,7 @@
 //
 //  MoviesAndWords_MovieObj.m
 //
-//  Created by gianluca.m.meroni@gmail.com  on 09/04/2020
+//  Created by gianluca.m.meroni@gmail.com  on 15/04/2020
 //  Copyright (c) 2020 __MyCompanyName__. All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 NSString *const kMoviesAndWords_MovieObjName = @"name";
 NSString *const kMoviesAndWords_MovieObjType = @"type";
+NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
 
 
 @interface MoviesAndWords_MovieObj ()
@@ -22,6 +23,7 @@ NSString *const kMoviesAndWords_MovieObjType = @"type";
 
 @synthesize name = _name;
 @synthesize type = _type;
+@synthesize targetedWords = _targetedWords;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -38,6 +40,7 @@ NSString *const kMoviesAndWords_MovieObjType = @"type";
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
             self.name = [self objectOrNilForKey:kMoviesAndWords_MovieObjName fromDictionary:dict];
             self.type = [self objectOrNilForKey:kMoviesAndWords_MovieObjType fromDictionary:dict];
+            self.targetedWords = [self objectOrNilForKey:kMoviesAndWords_MovieObjTargetedWords fromDictionary:dict];
 
     }
     
@@ -50,6 +53,17 @@ NSString *const kMoviesAndWords_MovieObjType = @"type";
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.name forKey:kMoviesAndWords_MovieObjName];
     [mutableDict setValue:self.type forKey:kMoviesAndWords_MovieObjType];
+    NSMutableArray *tempArrayForTargetedWords = [NSMutableArray array];
+    for (NSObject *subArrayObject in self.targetedWords) {
+        if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
+            // This class is a model object
+            [tempArrayForTargetedWords addObject:[subArrayObject performSelector:@selector(dictionaryRepresentation)]];
+        } else {
+            // Generic object
+            [tempArrayForTargetedWords addObject:subArrayObject];
+        }
+    }
+    [mutableDict setValue:[NSArray arrayWithArray:tempArrayForTargetedWords] forKey:kMoviesAndWords_MovieObjTargetedWords];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -75,6 +89,7 @@ NSString *const kMoviesAndWords_MovieObjType = @"type";
 
     self.name = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjName];
     self.type = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjType];
+    self.targetedWords = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjTargetedWords];
     return self;
 }
 
@@ -83,6 +98,7 @@ NSString *const kMoviesAndWords_MovieObjType = @"type";
 
     [aCoder encodeObject:_name forKey:kMoviesAndWords_MovieObjName];
     [aCoder encodeObject:_type forKey:kMoviesAndWords_MovieObjType];
+    [aCoder encodeObject:_targetedWords forKey:kMoviesAndWords_MovieObjTargetedWords];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -93,6 +109,7 @@ NSString *const kMoviesAndWords_MovieObjType = @"type";
 
         copy.name = [self.name copyWithZone:zone];
         copy.type = [self.type copyWithZone:zone];
+        copy.targetedWords = [self.targetedWords copyWithZone:zone];
     }
     
     return copy;
