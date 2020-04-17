@@ -120,6 +120,14 @@
         "misultin",
         "büsèca",
         "michetta",
+        "luppolo",
+        "fruttato",
+        "kafkiano",
+        "vitigno",
+        "ginepraio",
+        "vespaio",
+        "alpeggio",
+        "opinabile",
         "tauromachia"
     ],
     
@@ -127,10 +135,50 @@
     "listaMovie":
     {
       "movie_obj": [
+          {
+            "name": "collo",
+            "type": "embedded"
+          },
+          {
+            "name": "nonno",
+            "type": "embedded"
+          },
+          {
+            "name": "ciao",
+            "type": "embedded"
+          },
+          {
+            "name": "petit",
+            "type": "embedded",
+              "targetedWords": [ "petit ?!?", "è francese?" ]
+          },
+          {
+            "name": "due_",
+            "type": "embedded",
+              "targetedWords": [ "due" ]
+          },
+          {
+            "name": "che_schifo",
+            "type": "embedded",
+              "targetedWords": [ "che schifo!", "è uno scandalo" ]
+          },
+          {
+            "name": "grana",
+            "type": "embedded",
+              "targetedWords": [ "grana", "è francese?" ]
+          },
+          {
+            "name": "tappeto",
+            "type": "embedded"
+          },
         {
           "name": "asinello",
           "type": "embedded",
           "targetedWords": [ "asinello", "monello", "fringuello" ]
+        },
+        { "name": "coltello",
+          "type": "embedded",
+          "targetedWords": [ "coltello", "fratello", "pisello", "bastardello" ]
         },
         {
           "name": "chiuso",
@@ -197,7 +245,7 @@
         {
           "name": "no_dove_il_mio_dente_di_leone",
           "type": "embedded",
-          "targetedWords": [ "no, dov'è il mio dente di leone?", "potrebbe piovere", "ed è subito sera", "hai visto la mia cravatta?" ]
+          "targetedWords": [ "no! dov'è il mio dente di leone?", "potrebbe piovere", "ed è subito sera", "hai visto la mia cravatta?" ]
         },
         {
           "name": "bimbi",
@@ -279,7 +327,7 @@
         {
           "name": "no_da_solo",
           "type": "embedded",
-          "targetedWords": [ "no no no, da solo", "il nonno suona un assolo", "non sono mica sordo" ]
+          "targetedWords": [ "no no no! da solo", "il nonno suona un assolo", "non sono mica sordo" ]
         },
         {
           "name": "chiusa",
@@ -291,23 +339,49 @@
         }
       ]
     },
-    "listaMovie_test":
+    
+    
+    "listaMovie_XXY":
     {"movie_obj": [
-        { "name": "pizza",
-          "type": "web"},
-        { "name": "salsiccia",
-          "type": "web"},
-        {"name":"giallo",
-            "type":"web"},
-        
-        { "name": "basta",
-          "type": "embedded"},
-        { "name": "cane",
-          "type": "embedded"}
+        {"name":"pronti_via","type":"embedded"},
+        {
+          "name": "brutto",
+          "type": "web"
+        },
+        {
+          "name": "oh_lo_ho_mangiato_io",
+          "type": "web",
+          "source_url": "https://meronix.altervista.org/mastroPietro/oh_lo_ho_mangiato_io.mp4",
+          "targetedWords": [ "oh, l'ho mangiato io", "mi sono confuso", "pende a destra" ]
+        }
 
     ] },
     
+    "listaMovie_XXX":
+    {"movie_obj": [
+        {"name":"bolle","type":"embedded"},
+        {"name":"acceso","type":"embedded"},
+        {"name":"bagnetto","type":"embedded"},
+        {"name":"zitto","type":"embedded"},
+        {"name":"caramella","type":"embedded"},
+        {"name":"che_schifo_butta","type":"embedded"},
+        {"name":"grande","type":"embedded"},
+        {"name":"pappa_2","type":"embedded"},
+        {"name":"pronti_via","type":"embedded"},
+        {"name":"rompo","type":"embedded"},
+        {"name":"spento","type":"embedded"},
+        {"name":"tagli","type":"embedded"},
+        
+        {
+          "name": "oh_lo_ho_mangiato_io",
+          "type": "web",
+          "source_url": "https://meronix.altervista.org/mastroPietro/oh_lo_ho_mangiato_io.mp4",
+          "targetedWords": [ "oh, l'ho mangiato io", "mi sono confuso", "pende a destra" ]
+        }
+
+    ] },
     
+
     "listaRisposteOK":
     {"movie_obj":
         [

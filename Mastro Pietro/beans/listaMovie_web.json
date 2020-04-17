@@ -1,264 +1,457 @@
 {
-    "wrongWords": [
-        "canguro",
-        "dromedario",
-        "campeggio", "idromele"
-    ],
-    
-    "listaMovie":
-    {
-      "movie_obj": [
-        {
-          "name": "pancia",
-          "type": "web"
-        },
-        {
-          "name": "verde",
-          "type": "web"
-        },
-        {
-          "name": "sali",
-          "type": "web"
-        },
-        {
-          "name": "calze",
-          "type": "web"
-        },
-        {
-          "name": "pecora",
-          "type": "web"
-        },
-        {
-          "name": "scivolo",
-          "type": "web"
-        },
-        {
-          "name": "piede",
-          "type": "web"
-        },
-        {
-          "name": "carota",
-          "type": "web"
-        },
-        {
-          "name": "salsiccia",
-          "type": "web"
-        },
-        {
-          "name": "mano",
-          "type": "web"
-        },
-        {
-          "name": "patata",
-          "type": "web"
-        },
-        {
-          "name": "prato",
-          "type": "web"
-        },
-        {
-          "name": "salvietta",
-          "type": "web"
-        },
-        {
-          "name": "testa",
-          "type": "web"
-        },
-        {
-          "name": "gatto",
-          "type": "web"
-        },
-        {
-          "name": "erba",
-          "type": "web"
-        },
-        {
-          "name": "pistola",
-          "type": "web"
-        },
-        {
-          "name": "maiale",
-          "type": "web"
-        },
-        {
-          "name": "fiori",
-          "type": "web"
-        },
-        {
-          "name": "rosso",
-          "type": "web"
-        },
-        {
-          "name": "maglietta",
-          "type": "web"
-        },
-        {
-          "name": "brutto",
-          "type": "web"
-        },
-        {
-          "name": "delfino",
-          "type": "web"
-        },
-        {
-          "name": "zucchina",
-          "type": "web"
-        },
-        {
-          "name": "oh_lo_ho_mangiato_io",
-          "type": "web",
-          "targetedWords": [ "oh, l'ho mangiato io", "mi sono confuso", "pende a destra" ]
-        },
-        {
-          "name": "pizza",
-          "type": "web"
-        },
-        {
-          "name": "palla",
-          "type": "web"
-        },
-        {
-          "name": "due",
-          "type": "web"
-        },
-        {
-          "name": "si_e_io_tengo_il_cavallo",
-          "type": "web",
-          "targetedWords": [ "si, e io tengo il cavallo", "meglio a te che a me", "l'asimmetria bilatera" ]
-        },
-        {
-          "name": "sbadiglio",
-          "type": "web"
-        },
-        {
-          "name": "blu",
-          "type": "web"
-        },
-        {
-          "name": "pantaloni",
-          "type": "web"
-        },
-        {
-          "name": "buon_appetito",
-          "type": "web"
-        },
-        {
-          "name": "salta",
-          "type": "web"
-        },
-        {
-          "name": "si",
-          "type": "web"
-        },
-        {
-          "name": "mucca",
-          "type": "web"
-        },
-        {
-          "name": "tutto",
-          "type": "web"
-        },
-        {
-          "name": "buona_fortuna_capitano",
-          "type": "web",
-          "targetedWords": [ "buona fortuna, capitano", "il clavicembalo ben temperato", "la primavera di Vivaldi" ]
-        },
-        {
-          "name": "campana",
-          "type": "web"
-        },
-        {
-          "name": "paglia",
-          "type": "web"
-        },
-        {
-          "name": "salsiccia",
-          "type": "web"
-        },
-        {
-          "name": "occhio",
-          "type": "web"
-        },
-        {
-          "name": "arancio",
-          "type": "web"
-        },
-        {
-          "name": "tosse",
-          "type": "web"
-        },
-        {
-          "name": "cavallo",
-          "type": "web"
-        },
-        {
-          "name": "oh_no_ce_un_dente_di_leone",
-          "type": "web",
-          "targetedWords": [ "oh no, c'è un dente di leone", "il leone s'è addormentato", "la collina dei conigli" ]
-        },
-        {
-          "name": "dov_gnu",
-          "type": "web"
-        },
-        {
-          "name": "bimbo",
-          "type": "web"
-        },
-        {
-          "name": "pulcino",
-          "type": "web"
-        },
-        {
-          "name": "apri",
-          "type": "web"
-        },
-        {
-          "name": "macchina",
-          "type": "web"
-        },
-        {
-          "name": "giallo",
-          "type": "web"
-        },
-        {
-          "name": "scale",
-          "type": "web"
-        },
-        {
-          "name": "no_questo_disegno_non_mi_piace",
-          "type": "web",
-          "targetedWords": [ "no, questo disegno non mi piace", "ho preso una multa", "questa volta offri tu" ]
-        },
-        {
-          "name": "bocca",
-          "type": "web"
-        },
-        {
-          "name": "ombelico",
-          "type": "web"
-        },
-        {
-          "name": "ma_io_devo_andare_in_macchina",
-          "type": "web",
-          "targetedWords": [ "ma io devo andare in macchina", "mi gira la testa", "domani non si va a scuola" ]
-        },
-        {
-          "name": "capretta",
-          "type": "web"
-        }
-      ]
-    },
-    
-    "listaRisposteOK":
-    {"movie_obj":
-        [  ]
-    },
-    
-    "listaRisposteKO":
-    {"movie_obj":
-        [  ]
-    }
+  "wrongWords": [
+    "canguro",
+    "dromedario",
+    "campeggio",
+    "idromele"
+  ],
+  "listaMovie": {
+    "movie_obj": [
+      {
+        "name": "acceso",
+        "type": "web"
+      },
+      {
+        "name": "grande",
+        "type": "web"
+      },
+      {
+        "name": "zucchina",
+        "type": "web"
+      },
+      {
+        "name": "oh_lo_ho_mangiato_io",
+        "type": "web",
+        "source_url": "https://meronix.altervista.org/mastroPietro/oh_lo_ho_mangiato_io.mp4",
+        "targetedWords": [
+          "oh, l'ho mangiato io",
+          "mi sono confuso",
+          "pende a destra"
+        ]
+      },
+      {
+        "name": "buon_appetito_",
+        "type": "web"
+      },
+      {
+        "name": "pizza",
+        "type": "web"
+      },
+      {
+        "name": "quattro",
+        "type": "web"
+      },
+      {
+        "name": "palla",
+        "type": "web"
+      },
+      {
+        "name": "due",
+        "type": "web"
+      },
+      {
+        "name": "si_e_io_tengo_il_cavallo",
+        "type": "web",
+        "targetedWords": [
+          "si, e io tengo il cavallo",
+          "meglio a te che a me",
+          "l'asimmetria bilatera"
+        ]
+      },
+      {
+        "name": "bagnetto",
+        "type": "web"
+      },
+      {
+        "name": "sbadiglio",
+        "type": "web"
+      },
+      {
+        "name": "blu",
+        "type": "web"
+      },
+      {
+        "name": "questo",
+        "type": "web"
+      },
+      {
+        "name": "dormire",
+        "type": "web"
+      },
+      {
+        "name": "notte",
+        "type": "web"
+      },
+      {
+        "name": "verde",
+        "type": "web"
+      },
+      {
+        "name": "sali",
+        "type": "web"
+      },
+      {
+        "name": "forchetta_",
+        "type": "web"
+      },
+      {
+        "name": "pantaloni",
+        "type": "web"
+      },
+      {
+        "name": "forchetta",
+        "type": "web"
+      },
+      {
+        "name": "buon_appetito",
+        "type": "web"
+      },
+      {
+        "name": "auguri_",
+        "type": "web"
+      },
+      {
+        "name": "bacio",
+        "type": "web"
+      },
+      {
+        "name": "che_schifo_butta",
+        "type": "web"
+      },
+      {
+        "name": "calze",
+        "type": "web"
+      },
+      {
+        "name": "salta",
+        "type": "web"
+      },
+      {
+        "name": "aiuto",
+        "type": "web"
+      },
+      {
+        "name": "si",
+        "type": "web"
+      },
+      {
+        "name": "pecora",
+        "type": "web"
+      },
+      {
+        "name": "mucca",
+        "type": "web"
+      },
+      {
+        "name": "taglio",
+        "type": "web"
+      },
+      {
+        "name": "spento",
+        "type": "web"
+      },
+      {
+        "name": "latte",
+        "type": "web"
+      },
+      {
+        "name": "tutto",
+        "type": "web"
+      },
+      {
+        "name": "buona_fortuna_capitano",
+        "type": "web",
+        "targetedWords": [
+          "buona fortuna, capitano",
+          "il clavicembalo ben temperato",
+          "la primavera di Vivaldi"
+        ]
+      },
+      {
+        "name": "vado",
+        "type": "web"
+      },
+      {
+        "name": "piccolo",
+        "type": "web"
+      },
+      {
+        "name": "campana",
+        "type": "web"
+      },
+      {
+        "name": "paglia",
+        "type": "web"
+      },
+      {
+        "name": "scivolo",
+        "type": "web"
+      },
+      {
+        "name": "mamma",
+        "type": "web"
+      },
+      {
+        "name": "pronti_via",
+        "type": "web"
+      },
+      {
+        "name": "carota",
+        "type": "web"
+      },
+      {
+        "name": "vai",
+        "type": "web"
+      },
+      {
+        "name": "rompo",
+        "type": "web"
+      },
+      {
+        "name": "sedia",
+        "type": "web"
+      },
+      {
+        "name": "salsiccia",
+        "type": "web"
+      },
+      {
+        "name": "puzza",
+        "type": "web"
+      },
+      {
+        "name": "occhio",
+        "type": "web"
+      },
+      {
+        "name": "mano",
+        "type": "web"
+      },
+      {
+        "name": "arancio",
+        "type": "web"
+      },
+      {
+        "name": "bu_bu_settete",
+        "type": "web"
+      },
+      {
+        "name": "prato",
+        "type": "web"
+      },
+      {
+        "name": "zitto",
+        "type": "web"
+      },
+      {
+        "name": "muro",
+        "type": "web"
+      },
+      {
+        "name": "puccia",
+        "type": "web"
+      },
+      {
+        "name": "salvietta",
+        "type": "web"
+      },
+      {
+        "name": "tosse",
+        "type": "web"
+      },
+      {
+        "name": "tigro",
+        "type": "web"
+      },
+      {
+        "name": "testa",
+        "type": "web"
+      },
+      {
+        "name": "cavallo",
+        "type": "web"
+      },
+      {
+        "name": "oh_no_ce_un_dente_di_leone",
+        "type": "web",
+        "targetedWords": [
+          "oh no! c'è un dente di leone",
+          "il leone s'è addormentato",
+          "la collina dei conigli"
+        ]
+      },
+      {
+        "name": "grazie",
+        "type": "web"
+      },
+      {
+        "name": "taglio_",
+        "type": "web"
+      },
+      {
+        "name": "dov_gnu",
+        "type": "web"
+      },
+      {
+        "name": "pappa_",
+        "type": "web"
+      },
+      {
+        "name": "coccole_",
+        "type": "web"
+      },
+      {
+        "name": "tagli",
+        "type": "web"
+      },
+      {
+        "name": "bimbo",
+        "type": "web"
+      },
+      {
+        "name": "schiaccio",
+        "type": "web"
+      },
+      {
+        "name": "bolle",
+        "type": "web"
+      },
+      {
+        "name": "cucchiaio",
+        "type": "web"
+      },
+      {
+        "name": "cioccolato",
+        "type": "web"
+      },
+      {
+        "name": "pulcino",
+        "type": "web"
+      },
+      {
+        "name": "apri",
+        "type": "web"
+      },
+      {
+        "name": "seduto",
+        "type": "web"
+      },
+      {
+        "name": "macchina",
+        "type": "web"
+      },
+      {
+        "name": "giallo",
+        "type": "web"
+      },
+      {
+        "name": "calze_",
+        "type": "web"
+      },
+      {
+        "name": "tappo",
+        "type": "web"
+      },
+      {
+        "name": "caramella",
+        "type": "web"
+      },
+      {
+        "name": "scale",
+        "type": "web"
+      },
+      {
+        "name": "erba",
+        "type": "web"
+      },
+      {
+        "name": "pistola",
+        "type": "web"
+      },
+      {
+        "name": "no_questo_disegno_non_mi_piace",
+        "type": "web",
+        "targetedWords": [
+          "no, questo disegno non mi piace",
+          "ho preso una multa",
+          "questa volta offri tu"
+        ]
+      },
+      {
+        "name": "orecchio",
+        "type": "web"
+      },
+      {
+        "name": "bocca",
+        "type": "web"
+      },
+      {
+        "name": "ombelico",
+        "type": "web"
+      },
+      {
+        "name": "ma_io_devo_andare_in_macchina",
+        "type": "web",
+        "targetedWords": [
+          "ma io devo andare in macchina",
+          "mi gira la testa",
+          "domani non si va a scuola"
+        ]
+      },
+      {
+        "name": "posto",
+        "type": "web"
+      },
+      {
+        "name": "papa",
+        "type": "web"
+      },
+      {
+        "name": "maiale",
+        "type": "web"
+      },
+      {
+        "name": "fiori",
+        "type": "web"
+      },
+      {
+        "name": "rosso",
+        "type": "web"
+      },
+      {
+        "name": "maglietta",
+        "type": "web"
+      },
+      {
+        "name": "elicottero",
+        "type": "web"
+      },
+      {
+        "name": "capretta",
+        "type": "web"
+      },
+      {
+        "name": "prego",
+        "type": "web"
+      },
+      {
+        "name": "rotto",
+        "type": "web"
+      },
+      {
+        "name": "caduto",
+        "type": "web"
+      },
+      {
+        "name": "delfino",
+        "type": "web"
+      }
+    ]
+  },
+  "listaRisposteOK": {
+    "movie_obj": []
+  },
+  "listaRisposteKO": {
+    "movie_obj": []
+  }
 }
-
-
-

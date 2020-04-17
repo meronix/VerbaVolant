@@ -318,6 +318,11 @@
     if ([aMovieobj getType] == MovieSourceType_web) {
         NSString* temp_fileName = [aMovieFileName stringByReplacingOccurrencesOfString:@" " withString:@"_"];
         temp_fileName = [NSString stringWithFormat:@"https://meronix.altervista.org/mastroPietro/%@.mp4", temp_fileName];
+        
+        if (aMovieobj.sourceUrl.length) {
+            temp_fileName = aMovieobj.sourceUrl;
+        }
+        
         url = [NSURL URLWithString:temp_fileName];
         [self checkVideoOnLineAvailability:temp_fileName];
         LOG(@"PLAY NEW FILE URL :::::: %@", url);
@@ -600,7 +605,8 @@
         correctWord = tempWordstoBeUsed[0];
         [tempWordstoBeUsed removeObjectAtIndex:0];
     }
-    [tempButon setTitle:correctWord forState:UIControlStateNormal];
+    NSString* tempString = [correctWord stringByReplacingOccurrencesOfString:@"_" withString:@" "];
+    [tempButon setTitle:tempString forState:UIControlStateNormal];
     
     NSMutableArray * tempArrayWords = [self.myMoviesAndWords_local.wrongWords mutableCopy];
     if (_myMoviesAndWords_web && _myMoviesAndWords_web.wrongWords.count > 0) {
@@ -615,7 +621,8 @@
             } else {
                 aWrongWord = [self getRandomNameInList:tempArrayWords andRemove:YES];
             }
-            [aButt setTitle:aWrongWord forState:UIControlStateNormal];
+            tempString = [aWrongWord stringByReplacingOccurrencesOfString:@"_" withString:@" "];
+            [aButt setTitle:tempString forState:UIControlStateNormal];
         }
     }
     

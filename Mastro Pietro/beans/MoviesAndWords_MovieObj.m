@@ -1,16 +1,17 @@
 //
 //  MoviesAndWords_MovieObj.m
 //
-//  Created by gianluca.m.meroni@gmail.com  on 15/04/2020
+//  Created by gianluca.m.meroni@gmail.com  on 17/04/2020
 //  Copyright (c) 2020 __MyCompanyName__. All rights reserved.
 //
 
 #import "MoviesAndWords_MovieObj.h"
 
 
+NSString *const kMoviesAndWords_MovieObjSourceUrl = @"source_url";
+NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
 NSString *const kMoviesAndWords_MovieObjName = @"name";
 NSString *const kMoviesAndWords_MovieObjType = @"type";
-NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
 
 
 @interface MoviesAndWords_MovieObj ()
@@ -21,9 +22,10 @@ NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
 
 @implementation MoviesAndWords_MovieObj
 
+@synthesize sourceUrl = _sourceUrl;
+@synthesize targetedWords = _targetedWords;
 @synthesize name = _name;
 @synthesize type = _type;
-@synthesize targetedWords = _targetedWords;
 
 
 + (instancetype)modelObjectWithDictionary:(NSDictionary *)dict
@@ -38,9 +40,10 @@ NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
     // This check serves to make sure that a non-NSDictionary object
     // passed into the model class doesn't break the parsing.
     if(self && [dict isKindOfClass:[NSDictionary class]]) {
+            self.sourceUrl = [self objectOrNilForKey:kMoviesAndWords_MovieObjSourceUrl fromDictionary:dict];
+            self.targetedWords = [self objectOrNilForKey:kMoviesAndWords_MovieObjTargetedWords fromDictionary:dict];
             self.name = [self objectOrNilForKey:kMoviesAndWords_MovieObjName fromDictionary:dict];
             self.type = [self objectOrNilForKey:kMoviesAndWords_MovieObjType fromDictionary:dict];
-            self.targetedWords = [self objectOrNilForKey:kMoviesAndWords_MovieObjTargetedWords fromDictionary:dict];
 
     }
     
@@ -51,8 +54,7 @@ NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
 - (NSDictionary *)dictionaryRepresentation
 {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
-    [mutableDict setValue:self.name forKey:kMoviesAndWords_MovieObjName];
-    [mutableDict setValue:self.type forKey:kMoviesAndWords_MovieObjType];
+    [mutableDict setValue:self.sourceUrl forKey:kMoviesAndWords_MovieObjSourceUrl];
     NSMutableArray *tempArrayForTargetedWords = [NSMutableArray array];
     for (NSObject *subArrayObject in self.targetedWords) {
         if([subArrayObject respondsToSelector:@selector(dictionaryRepresentation)]) {
@@ -64,6 +66,8 @@ NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
         }
     }
     [mutableDict setValue:[NSArray arrayWithArray:tempArrayForTargetedWords] forKey:kMoviesAndWords_MovieObjTargetedWords];
+    [mutableDict setValue:self.name forKey:kMoviesAndWords_MovieObjName];
+    [mutableDict setValue:self.type forKey:kMoviesAndWords_MovieObjType];
 
     return [NSDictionary dictionaryWithDictionary:mutableDict];
 }
@@ -87,18 +91,20 @@ NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
 {
     self = [super init];
 
+    self.sourceUrl = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjSourceUrl];
+    self.targetedWords = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjTargetedWords];
     self.name = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjName];
     self.type = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjType];
-    self.targetedWords = [aDecoder decodeObjectForKey:kMoviesAndWords_MovieObjTargetedWords];
     return self;
 }
 
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
 
+    [aCoder encodeObject:_sourceUrl forKey:kMoviesAndWords_MovieObjSourceUrl];
+    [aCoder encodeObject:_targetedWords forKey:kMoviesAndWords_MovieObjTargetedWords];
     [aCoder encodeObject:_name forKey:kMoviesAndWords_MovieObjName];
     [aCoder encodeObject:_type forKey:kMoviesAndWords_MovieObjType];
-    [aCoder encodeObject:_targetedWords forKey:kMoviesAndWords_MovieObjTargetedWords];
 }
 
 - (id)copyWithZone:(NSZone *)zone
@@ -107,9 +113,10 @@ NSString *const kMoviesAndWords_MovieObjTargetedWords = @"targetedWords";
     
     if (copy) {
 
+        copy.sourceUrl = [self.sourceUrl copyWithZone:zone];
+        copy.targetedWords = [self.targetedWords copyWithZone:zone];
         copy.name = [self.name copyWithZone:zone];
         copy.type = [self.type copyWithZone:zone];
-        copy.targetedWords = [self.targetedWords copyWithZone:zone];
     }
     
     return copy;
