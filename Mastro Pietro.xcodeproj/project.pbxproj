@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		92C52E4BB085FD62CF2BD860 /* Pods_Mastro_Pietro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA2F575214D60FDF4BD7BE0 /* Pods_Mastro_Pietro.framework */; };
+		9496903FA7ED24E6C3D9B1B0 /* Pods_VerbaVolant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B192D6DA3E39953CF04E90A7 /* Pods_VerbaVolant.framework */; };
 		CA08A0CF243DB7430070DB07 /* Data_Loader.m in Sources */ = {isa = PBXBuildFile; fileRef = CA08A0CE243DB7430070DB07 /* Data_Loader.m */; };
 		CA08A0DC243E2B9F0070DB07 /* chiudiBianco@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA08A0D7243E2B9E0070DB07 /* chiudiBianco@2x.png */; };
 		CA08A0DD243E2B9F0070DB07 /* chiudiBianco~ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA08A0D8243E2B9E0070DB07 /* chiudiBianco~ipad@2x.png */; };
@@ -175,7 +176,10 @@
 		91EA140C3DE72C1D3903B05C /* Pods-Mastro Pietro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastro Pietro.release.xcconfig"; path = "Target Support Files/Pods-Mastro Pietro/Pods-Mastro Pietro.release.xcconfig"; sourceTree = "<group>"; };
 		9FA2F575214D60FDF4BD7BE0 /* Pods_Mastro_Pietro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mastro_Pietro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0559D9BFAD8A36D7DF9FD1B /* Pods-Mastro Pietro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastro Pietro.debug.xcconfig"; path = "Target Support Files/Pods-Mastro Pietro/Pods-Mastro Pietro.debug.xcconfig"; sourceTree = "<group>"; };
+		B17252052DE2932EFA28A08B /* Pods-VerbaVolant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerbaVolant.release.xcconfig"; path = "Target Support Files/Pods-VerbaVolant/Pods-VerbaVolant.release.xcconfig"; sourceTree = "<group>"; };
+		B192D6DA3E39953CF04E90A7 /* Pods_VerbaVolant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VerbaVolant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADABDE8266D6ED321401D4B /* Pods-Mastro Pietro Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mastro Pietro Mac.release.xcconfig"; path = "Target Support Files/Pods-Mastro Pietro Mac/Pods-Mastro Pietro Mac.release.xcconfig"; sourceTree = "<group>"; };
+		C98C75BCC0BA6BD2AC1CFD24 /* Pods-VerbaVolant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VerbaVolant.debug.xcconfig"; path = "Target Support Files/Pods-VerbaVolant/Pods-VerbaVolant.debug.xcconfig"; sourceTree = "<group>"; };
 		CA08A0CD243DB7430070DB07 /* Data_Loader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data_Loader.h; sourceTree = "<group>"; };
 		CA08A0CE243DB7430070DB07 /* Data_Loader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data_Loader.m; sourceTree = "<group>"; };
 		CA08A0D0243DCA250070DB07 /* Globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globals.h; sourceTree = "<group>"; };
@@ -324,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE5262226749EF900C0906E /* AVKit.framework in Frameworks */,
+				9496903FA7ED24E6C3D9B1B0 /* Pods_VerbaVolant.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +342,8 @@
 				91EA140C3DE72C1D3903B05C /* Pods-Mastro Pietro.release.xcconfig */,
 				573CDED0DBD343C476C1DB1B /* Pods-Mastro Pietro Mac.debug.xcconfig */,
 				BADABDE8266D6ED321401D4B /* Pods-Mastro Pietro Mac.release.xcconfig */,
+				C98C75BCC0BA6BD2AC1CFD24 /* Pods-VerbaVolant.debug.xcconfig */,
+				B17252052DE2932EFA28A08B /* Pods-VerbaVolant.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -580,6 +587,7 @@
 				CADD380924362B0A00A94017 /* AVKit.framework */,
 				14E4E74FB8DC7A04ACAF0E9D /* Pods_Mastro_Pietro_Mac.framework */,
 				9FA2F575214D60FDF4BD7BE0 /* Pods_Mastro_Pietro.framework */,
+				B192D6DA3E39953CF04E90A7 /* Pods_VerbaVolant.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -626,6 +634,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CAE5261F26749EA200C0906E /* Build configuration list for PBXNativeTarget "VerbaVolant" */;
 			buildPhases = (
+				71F4C97B51BB4CBBBC9017FE /* [CP] Check Pods Manifest.lock */,
 				CAE5260A26749EA100C0906E /* Sources */,
 				CAE5260B26749EA100C0906E /* Frameworks */,
 				CAE5260C26749EA100C0906E /* Resources */,
@@ -853,6 +862,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Mastro Pietro-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71F4C97B51BB4CBBBC9017FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VerbaVolant-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1183,6 +1214,7 @@
 		};
 		CAE5262026749EA200C0906E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C98C75BCC0BA6BD2AC1CFD24 /* Pods-VerbaVolant.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1209,6 +1241,7 @@
 		};
 		CAE5262126749EA200C0906E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B17252052DE2932EFA28A08B /* Pods-VerbaVolant.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -14,7 +14,7 @@ target 'Mastro Pietro' do
 
 end
 
-target 'Mastro Pietro Mac' do
+target 'VerbaVolant' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 

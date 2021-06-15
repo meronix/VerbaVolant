@@ -48,6 +48,10 @@ ios/.build/
 ios/Pods/
 ios/*.xcworkspace
 ios/Podfile.lock
+Pods
+Podfile.lock
+*.xcworkspacedata
+*.xcworkspace
 
 # Carthage
 #
