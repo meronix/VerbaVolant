@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 
+#import <Firebase/Firebase.h>
+//#import <GoogleMobileAds/GoogleMobileAds.h>
+
 @interface AppDelegate ()
+
 
 @end
 
@@ -18,7 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.restrictRotation = UIInterfaceOrientationMaskLandscape;
+    [FIRApp configure];
     
+    GADRequestConfiguration *requestConfiguration = GADMobileAds.sharedInstance.requestConfiguration;
+    [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
     return YES;
 }
 

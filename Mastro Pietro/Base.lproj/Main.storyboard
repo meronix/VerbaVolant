@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iz-JT-juM">
-    <device id="retina3_5" orientation="landscape" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4iz-JT-juM">
+    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -36,7 +37,7 @@
                                                 <rect key="frame" x="0.0" y="237" width="480" height="83"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ifI-FQ-Jjq">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ifI-FQ-Jjq">
                                                         <rect key="frame" x="6" y="8" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
@@ -46,7 +47,7 @@
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="JCF-kC-MCK"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xAu-hf-b8x">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xAu-hf-b8x">
                                                         <rect key="frame" x="244" y="8" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +57,7 @@
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="XDB-Qz-FSJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yek-4e-19X">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yek-4e-19X">
                                                         <rect key="frame" x="6" y="44" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
@@ -66,7 +67,7 @@
                                                             <action selector="answerButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="H8J-5s-KYe"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fVL-xk-Ulk">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fVL-xk-Ulk">
                                                         <rect key="frame" x="244" y="44" width="230" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <color key="backgroundColor" red="0.0039215686269999999" green="0.44705882349999998" blue="0.63921568630000003" alpha="0.4175561179577465" colorSpace="custom" customColorSpace="sRGB"/>
@@ -133,7 +134,7 @@
                                         <rect key="frame" x="0.0" y="256" width="480" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-33-pyz">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJj-33-pyz">
                                                 <rect key="frame" x="88.5" y="0.0" width="130" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.68131512400000005" blue="0.1078287736" alpha="0.75874779929577463" colorSpace="custom" customColorSpace="sRGB"/>
@@ -145,7 +146,7 @@
                                                     <action selector="exitButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Qtx-dr-4Au"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6aH-Xf-gMw">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6aH-Xf-gMw">
                                                 <rect key="frame" x="260" y="0.0" width="130" height="32"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.68131512400000005" blue="0.1078287736" alpha="0.75407130280000001" colorSpace="custom" customColorSpace="sRGB"/>
@@ -169,7 +170,7 @@
                                 <rect key="frame" x="33" y="41" width="412" height="122"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="fondo-alto-verde" id="Nrs-X6-o2M">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo-alto-verde" id="Nrs-X6-o2M">
                                         <rect key="frame" x="-59" y="-28" width="517" height="180"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -213,7 +214,7 @@ Condividi il tuo risultato</string>
                                 <rect key="frame" x="51" y="156" width="377" height="116"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="fondo-alto-verde" id="P77-oo-Ygl">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo-alto-verde" id="P77-oo-Ygl">
                                         <rect key="frame" x="-93" y="0.0" width="551" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -238,7 +239,7 @@ Condividi il tuo risultato</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="22"/>
-                                                <color key="textColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fondo-alto-rosso" translatesAutoresizingMaskIntoConstraints="NO" id="cNe-jL-HNh">
@@ -250,7 +251,7 @@ Condividi il tuo risultato</string>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="22"/>
-                                                <color key="textColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -277,12 +278,17 @@ Condividi il tuo risultato</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="Risaltyp" family="Risaltyp" pointSize="25"/>
-                                <color key="textColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="systemGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SUv-BX-dSR" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="137"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zpF-eE-XfE"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="y73-Io-fmu"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -293,6 +299,7 @@ Condividi il tuo risultato</string>
                         <outlet property="b_answer_2" destination="xAu-hf-b8x" id="I3p-kL-DzW"/>
                         <outlet property="b_answer_3" destination="yek-4e-19X" id="LzN-cb-WUO"/>
                         <outlet property="b_answer_4" destination="fVL-xk-Ulk" id="iUB-lN-mdf"/>
+                        <outlet property="banner" destination="SUv-BX-dSR" id="nji-Xa-r7x"/>
                         <outlet property="boxContinueButtons" destination="AFd-Hs-0Xu" id="zqA-eg-hIY"/>
                         <outlet property="boxMessage" destination="qU5-jl-dxx" id="RQZ-9V-KOa"/>
                         <outlet property="boxQuestionButtons" destination="OK1-Ld-zxm" id="Wyk-Pw-CKS"/>
@@ -314,7 +321,7 @@ Condividi il tuo risultato</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1236" y="-441"/>
+            <point key="canvasLocation" x="1235.139092240117" y="-441.796875"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="ui8-nN-f4r">
@@ -357,7 +364,12 @@ Esegui il nostro test e scopri quante parole riesci a riconoscere a orecchio.</s
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-Rh-Ub2">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FKy-gy-bee" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="96"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmc-Rh-Ub2">
                                 <rect key="frame" x="165" y="221" width="285" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -370,14 +382,15 @@ Esegui il nostro test e scopri quante parole riesci a riconoscere a orecchio.</s
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="cHg-WM-1jr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="gWc-vo-dDE"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="480" height="320"/>
                     <connections>
+                        <outlet property="banner" destination="FKy-gy-bee" id="NQL-hf-Zwa"/>
                         <outlet property="startButton" destination="zmc-Rh-Ub2" id="afY-hQ-D2j"/>
                         <outlet property="welcomeMessage" destination="gMc-4R-76T" id="kBX-1G-1Mt"/>
                     </connections>
@@ -413,5 +426,11 @@ Esegui il nostro test e scopri quante parole riesci a riconoscere a orecchio.</s
         <image name="freccia_rossa" width="115.5" height="73"/>
         <image name="reload.png" width="22" height="22"/>
         <image name="schedaBox.png" width="100" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

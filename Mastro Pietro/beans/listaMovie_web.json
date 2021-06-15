@@ -3,6 +3,7 @@
     "canguro",
     "dromedario",
     "campeggio",
+    "7 spose per 7 fratelli",
     "idromele"
   ],
   "listaMovie": {
@@ -31,7 +32,10 @@
       },
       {
         "name": "buon_appetito_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "buon appetito"
+        ]
       },
       {
         "name": "pizza",
@@ -92,7 +96,10 @@
       },
       {
         "name": "forchetta_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "forchetta"
+        ]
       },
       {
         "name": "pantaloni",
@@ -104,11 +111,17 @@
       },
       {
         "name": "buon_appetito",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "buon appetito"
+        ]
       },
       {
         "name": "auguri_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "auguri"
+        ]
       },
       {
         "name": "bacio",
@@ -116,7 +129,10 @@
       },
       {
         "name": "che_schifo_butta",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "che schifo! butta!"
+        ]
       },
       {
         "name": "calze",
@@ -193,7 +209,10 @@
       },
       {
         "name": "pronti_via",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "pronti... via"
+        ]
       },
       {
         "name": "carota",
@@ -233,7 +252,10 @@
       },
       {
         "name": "bu_bu_settete",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "bu bu... settete"
+        ]
       },
       {
         "name": "prato",
@@ -286,19 +308,33 @@
       },
       {
         "name": "taglio_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "taglio"
+        ]
       },
       {
         "name": "dov_gnu",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "dov'è lo gnu?",
+          "vorrei un arrostino",
+          "lo gnu dell'Elia"
+        ]
       },
       {
         "name": "pappa_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "pappa"
+        ]
       },
       {
         "name": "coccole_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "coccole"
+        ]
       },
       {
         "name": "tagli",
@@ -346,7 +382,10 @@
       },
       {
         "name": "calze_",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "calze"
+        ]
       },
       {
         "name": "tappo",
@@ -404,7 +443,12 @@
       },
       {
         "name": "papa",
-        "type": "web"
+        "type": "web",
+        "targetedWords": [
+          "papà",
+          "papa",
+          "perché fai cucinare mamma?"
+        ]
       },
       {
         "name": "maiale",

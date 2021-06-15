@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MoviesAndWords_Main.h"
+#import <Firebase/Firebase.h>
 
 typedef enum : NSUInteger {
     MovieSourceType_embedded = 0,
@@ -24,7 +25,7 @@ typedef enum : NSUInteger {
 
 
 
-@interface MainGameVC : UIViewController <UINavigationControllerDelegate, DataLoaderProtocol>
+@interface MainGameVC : UIViewController <UINavigationControllerDelegate, DataLoaderProtocol, GADInterstitialDelegate>
 
 
 @end

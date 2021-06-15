@@ -114,6 +114,9 @@
         "ambrata",
         "cotechino",
         "ossobuchi",
+        "ossimoro",
+        "prammatica sanzione",
+        "legge salica",
         "lavarello",
         "alborelle",
         "carpione",
@@ -219,7 +222,7 @@
         {
           "name": "prendiamo_un_altro_gnu",
           "type": "embedded",
-          "targetedWords": [ "prendiamo un altro gnu", "potrebbe essere peggio", "essere o non essere" ]
+          "targetedWords": [ "prendiamo un altro gnu?", "potrebbe essere peggio", "essere o non essere" ]
         },
         {
           "name": "chiesa",
@@ -357,28 +360,34 @@
 
     ] },
     
-    "listaMovie_XXX":
+    "listaMovie_test":
     {"movie_obj": [
-        {"name":"bolle","type":"embedded"},
-        {"name":"acceso","type":"embedded"},
-        {"name":"bagnetto","type":"embedded"},
-        {"name":"zitto","type":"embedded"},
-        {"name":"caramella","type":"embedded"},
-        {"name":"che_schifo_butta","type":"embedded"},
-        {"name":"grande","type":"embedded"},
-        {"name":"pappa_2","type":"embedded"},
-        {"name":"pronti_via","type":"embedded"},
-        {"name":"rompo","type":"embedded"},
-        {"name":"spento","type":"embedded"},
-        {"name":"tagli","type":"embedded"},
-        
         {
-          "name": "oh_lo_ho_mangiato_io",
+          "name": "dov_gnu",
           "type": "web",
-          "source_url": "https://meronix.altervista.org/mastroPietro/oh_lo_ho_mangiato_io.mp4",
-          "targetedWords": [ "oh, l'ho mangiato io", "mi sono confuso", "pende a destra" ]
+          "targetedWords": [
+            "dov'è lo gnu?",
+            "vorrei un arrostino",
+            "lo gnu dell'Elia"
+          ]
+        },        {
+          "name": "bolle",
+          "type": "web",
+          "targetedWords": [
+            "bolle",
+            "vorrei un arrostino",
+            "lo gnu dell'Elia"
+          ]
+        },
+        {
+          "name": "papa",
+          "type": "web",
+          "targetedWords": [
+            "papà",
+            "papa",
+            "perché fai cucinare mamma?"
+          ]
         }
-
     ] },
     
 

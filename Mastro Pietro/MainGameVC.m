@@ -12,6 +12,7 @@
 #import "AppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 
+
 #define webIncluded @"-includi le video lezioni on-line: si"
 #define webNotIncluded @"-includi le video lezioni on-line: no"
 
@@ -68,9 +69,82 @@
 @property (nonatomic, strong) MoviesAndWords_MovieObj * currentMovie;
 @property (nonatomic, strong) UIColor * greenColor;
 
+@property (nonatomic, strong) GADInterstitial * interstitial;
+
+@property (nonatomic, strong) IBOutlet GADBannerView * banner;
+
 @end
 
 @implementation MainGameVC
+
+
+-(void) createAndLoadInterstitial {
+    self.interstitial = [[GADInterstitial alloc] initWithAdUnitID:@"ca-app-pub-5952984043381908/7319166096"];// ad] adUnitID: )
+    self.interstitial.delegate = self;
+    GADRequest * request = [GADRequest request];
+    [self.interstitial loadRequest:request];
+  }
+
+
+/// Called when an interstitial ad request succeeded. Show it at the next transition point in your
+/// application such as when transitioning between view controllers.
+- (void)interstitialDidReceiveAd:(nonnull GADInterstitial *)ad{
+    NSLog(@"interstitialDidReceiveAd :");
+   if (ad.isReady) {
+        [ad presentFromRootViewController:self];
+    }
+}
+
+/// Called when an interstitial ad request completed without an interstitial to
+/// show. This is common since interstitials are shown sparingly to users.
+- (void)interstitial:(nonnull GADInterstitial *)ad
+didFailToReceiveAdWithError:(nonnull GADRequestError *)error{
+    NSLog(@"didFailToReceiveAdWithError : %@", error);
+  [self.interstitial loadRequest:[GADRequest request]];
+
+}
+
+#pragma mark Display-Time Lifecycle Notifications
+
+/// Called just before presenting an interstitial. After this method finishes the interstitial will
+/// animate onto the screen. Use this opportunity to stop animations and save the state of your
+/// application in case the user leaves while the interstitial is on screen (e.g. to visit the App
+/// Store from a link on the interstitial).
+- (void)interstitialWillPresentScreen:(nonnull GADInterstitial *)ad{
+    NSLog(@"interstitialWillPresentScreen: %@", @"");
+
+}
+
+/// Called when |ad| fails to present.
+- (void)interstitialDidFailToPresentScreen:(nonnull GADInterstitial *)ad{
+    NSLog(@"interstitialDidFailToPresentScreen: %@", @"");
+
+}
+
+/// Called before the interstitial is to be animated off the screen.
+- (void)interstitialWillDismissScreen:(nonnull GADInterstitial *)ad{
+    NSLog(@"interstitialWillDismissScreen: %@", @"");
+
+}
+
+/// Called just after dismissing an interstitial and it has animated off the screen.
+- (void)interstitialDidDismissScreen:(nonnull GADInterstitial *)ad{
+    NSLog(@"interstitialDidDismissScreen: %@", @"");
+
+}
+
+/// Called just before the application will background or terminate because the user clicked on an
+/// ad that will launch another application (such as the App Store). The normal
+/// UIApplicationDelegate methods, like applicationDidEnterBackground:, will be called immediately
+/// before this.
+- (void)interstitialWillLeaveApplication:(nonnull GADInterstitial *)ad{
+    NSLog(@"interstitialWillLeaveApplication: %@", @"");
+
+}
+
+
+
+// ---- //
 
 -(BOOL)shouldAutorotate{
     return NO;
@@ -78,6 +152,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self createAndLoadInterstitial];
+    [self loadADBanner:self.banner withADUnitID:kBannerAdUnitID];
+
     self.useVideoOnline = NO;
     self.boxView_Share.hidden = YES;
     
@@ -128,6 +205,8 @@
     self.quizView.hidden = true;
     AppDelegate* appD = (AppDelegate*) [[UIApplication sharedApplication] delegate];
     appD.restrictRotation = UIInterfaceOrientationMaskLandscape;
+    LOG(@"self.banner: %@", self.banner);
+    LOG(@"self.banner: %@", self.banner);
 
 }
 
@@ -174,21 +253,6 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playerItemDidReachEnd:)
                                                      name:AVPlayerItemDidPlayToEndTimeNotification object:[_playerController.player currentItem]];
         
-        //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addEmergencyExitButton:)
-        //                                                     name:AVPlayerItemFailedToPlayToEndTimeNotification object:[_playerController.player currentItem]];
-        //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addEmergencyExitButton:)
-        //                                                     name:AVPlayerItemPlaybackStalledNotification object:[_playerController.player currentItem]];
-        //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addEmergencyExitButton:)
-        //                                                     name:AVPlayerItemNewErrorLogEntryNotification object:[_playerController.player currentItem]];
-        
-        //        [self.playerController.player addObserver:self
-        //        forKeyPath:@"status"
-        //           options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
-        //           context:nil];
-        //        [self.playerController.player addObserver:self
-        //        forKeyPath:@"error"
-        //           options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial)
-        //           context:nil];
         UITapGestureRecognizer * myTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showButtons)];
         [self.playerController.view addGestureRecognizer:myTap];
         self.playerController.view.userInteractionEnabled = YES;
@@ -505,6 +569,7 @@
     self.quizView.alpha = 0;
     self.quizView.hidden = YES;
     [self.navigationController popViewControllerAnimated:NO];
+    [self loadADBanner:self.banner withADUnitID:kBannerAdUnitID];
 }
 
 - (IBAction)replayButton:(UIButton *)sender {
@@ -768,7 +833,10 @@
         aDataLoader.object = nil;
         aDataLoader.parameter = nil;
         aDataLoader.timeOut = 8;
-        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[completeUrl standardizedURL]];
+        //        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[completeUrl standardizedURL]];
+        
+        NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[completeUrl standardizedURL] cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:20];
+        
         request.timeoutInterval = aDataLoader.timeOut;
         [request setHTTPMethod:@"GET"];
         [aDataLoader loadAsyncRequest:request];

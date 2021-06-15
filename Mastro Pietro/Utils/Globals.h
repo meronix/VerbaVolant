@@ -37,3 +37,4 @@
     #define LOGM(...)
 #endif
 
+#define kBannerAdUnitID @"ca-app-pub-5952984043381908/6910357584"
